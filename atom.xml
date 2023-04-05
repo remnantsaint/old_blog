@@ -224,16 +224,14 @@
     <link href="http://example.com/2023/03/29/%E4%B8%80%E4%BA%9BTip/"/>
     <id>http://example.com/2023/03/29/%E4%B8%80%E4%BA%9BTip/</id>
     <published>2023-03-29T13:41:37.000Z</published>
-    <updated>2023-04-05T14:55:09.710Z</updated>
+    <updated>2023-04-05T15:01:26.161Z</updated>
     
-    <content type="html"><![CDATA[<p>1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误<br>2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少<br>3.力扣上说的头结点意思是首元结点，带有数据域，若要删除首元结点，就需要定义一个虚拟头节点dummyhead，别忘了分配空间。（翻译问题？）</p>]]></content>
+    <content type="html"><![CDATA[<p>1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误<br>2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少<br>3.力扣上说的头结点意思是首元结点，带有数据域，若要删除首元结点，就需要定义一个虚拟头节点dummynode，别忘了分配空间。（翻译问题？）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误&lt;br&gt;
-2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少&lt;br&gt;
-3.力扣上说的头结点意</summary>
+    <summary type="html">&lt;p&gt;1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误&lt;br&gt;2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少&lt;br&gt;3.力扣上说的头结点意思是</summary>
       
     
     
