@@ -231,7 +231,9 @@
     
       
       
-    <summary type="html">&lt;p&gt;1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误&lt;br&gt;2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少&lt;br&gt;3.力扣上说的头结点意思是</summary>
+    <summary type="html">&lt;p&gt;1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误&lt;br&gt;
+2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少&lt;br&gt;
+3.力扣上说的头结点意</summary>
       
     
     
