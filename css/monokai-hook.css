@@ -6,17 +6,19 @@
   line-height: initial;
 }*/
 
-.highlight, pre {
+.highlight,
+pre {
     overflow-y: hidden;
     background-color: #272822;
     line-height: 24px;
 }
-.highlight:before{
+
+.highlight:before {
     background-color: #272822;
 }
 
 .highlight table>tbody>tr:nth-of-type(odd) {
-    background-color: #272822;
+    background-color: #222825;
 }
 
 .highlight::-webkit-scrollbar {
@@ -32,20 +34,20 @@
     /*background-color: #D62929;*/
     background-color: #6f6969;
     background-image: -webkit-linear-gradient(45deg,
-        rgba(255, 255, 255, 0.2) 12.5%,
-        transparent 12.5%,
-        transparent 25%,
-        rgba(255, 255, 255, 0.2) 25%,
-        rgba(255, 255, 255, 0.2) 37.5%,
-        transparent 37.5%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.2) 50%,
-        rgba(255, 255, 255, 0.2) 62.5%,
-        transparent 62.5%,
-        transparent 75%,
-        rgba(255, 255, 255, 0.2) 75%,
-        rgba(255, 255, 255, 0.2) 87.5%,
-        transparent 87.5%);
+            rgba(255, 255, 255, 0.2) 12.5%,
+            transparent 12.5%,
+            transparent 25%,
+            rgba(255, 255, 255, 0.2) 25%,
+            rgba(255, 255, 255, 0.2) 37.5%,
+            transparent 37.5%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 62.5%,
+            transparent 62.5%,
+            transparent 75%,
+            rgba(255, 255, 255, 0.2) 75%,
+            rgba(255, 255, 255, 0.2) 87.5%,
+            transparent 87.5%);
 }
 
 .highlight::-webkit-scrollbar-track {
