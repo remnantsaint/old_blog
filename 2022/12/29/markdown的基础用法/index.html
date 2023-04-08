@@ -40,6 +40,8 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+<link rel="stylesheet" href="/css/monokai-hook.css">
 
   
   
@@ -421,7 +423,7 @@
 <h4 id="7代码"><a class="markdownIt-Anchor" href="#7代码"></a> 7.代码</h4>
 <p> (1)段落上的一段代码可以用单反引号`包起来，例如：`printf()`，显示为<code>printf()</code>，在markdown文档中用来把演示代码圈起来很方便。<br />
  (2)区块代码通常用三个反引号包起来，并指定一种语言，```c++ 123 ```，显示为：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">123</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-number">123</span><br></code></pre></td></tr></table></figure>
 <h4 id="8链接"><a class="markdownIt-Anchor" href="#8链接"></a> 8.链接</h4>
 <p> (1)直接用&lt;&gt;将链接地址包起来，例如<code>&lt;https://remsait.com&gt;</code><br />
  (2)若需要自定义链接名称，用<code>[连接名称](链接地址)</code>来表示，例如：<code>[我的博客](https://remnantsaint.github.io)</code>，注意用<code>https://</code><br />
@@ -431,7 +433,7 @@
 (2)markdown无法指定图片的高度和宽度，可以用普通的<code>&lt;img&gt;</code>标签：<code>&lt;img decoding=&quot;async&quot; src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;50%&quot;&gt;</code></p>
 <h4 id="10表格"><a class="markdownIt-Anchor" href="#10表格"></a> 10.表格</h4>
 <p> markdown制作表格用|来分隔不同的单元格，使用-分隔表头和其他行，例如：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++">|  表头   | 表头  |<br>|  ----  | ----  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |<br></code></pre></td></tr></table></figure>
 <p>显示为：</p>
 <table>
 <thead>
@@ -463,9 +465,9 @@
   5.约等于<code>$\approx$</code>，效果为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≈</mo></mrow><annotation encoding="application/x-tex">\approx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.48312em;"></span><span class="strut bottom" style="height:0.48312em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">≈</span></span></span></span></p>
 <h4 id="注意"><a class="markdownIt-Anchor" href="#注意"></a> 注意</h4>
 <p> (1)在使用vscode编辑markdown时，因为用了markdownlint插件导致html标签有黄色波浪线，右键选择命令面板，打开用户设置，输入以下代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;markdownlint.config&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;default&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;MD033&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;allowed_elements&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;font&quot;</span>,</span><br><span class="line">      <span class="string">&quot;li&quot;</span>,</span><br><span class="line">      <span class="string">&quot;table&quot;</span>,</span><br><span class="line">      <span class="string">&quot;tr&quot;</span>,</span><br><span class="line">      <span class="string">&quot;td&quot;</span>,</span><br><span class="line">      <span class="string">&quot;u&quot;</span> <span class="comment">//自己添加html标签</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-string">&quot;markdownlint.config&quot;</span>: &#123;<br>  <span class="hljs-string">&quot;default&quot;</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-string">&quot;MD033&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;allowed_elements&quot;</span>: [<br>      <span class="hljs-string">&quot;font&quot;</span>,<br>      <span class="hljs-string">&quot;li&quot;</span>,<br>      <span class="hljs-string">&quot;table&quot;</span>,<br>      <span class="hljs-string">&quot;tr&quot;</span>,<br>      <span class="hljs-string">&quot;td&quot;</span>,<br>      <span class="hljs-string">&quot;u&quot;</span> <span class="hljs-comment">//自己添加html标签</span><br>    ]<br>  &#125;<br>&#125;,<br></code></pre></td></tr></table></figure>
 <p> (2)我的package.json文件中hexo-renderer-marked渲染器版本是&quot;^6.0.0&quot;，在浏览器中不会把<code>&amp;emsp;</code>变为空格，会显示<code>&amp;emsp;</code>文本样式，通过更改渲染器来解决问题：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-checkbox</span><br><span class="line">npm i markdown-it-imsize</span><br><span class="line">npm i markdown-it-expandable</span><br><span class="line">（该解决方法已改变，更改为kramed，具体看hexo初建站文章中数学公式问题）</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">npm un hexo-renderer-marked --save<br>npm i hexo-renderer-markdown-it --save<br>npm i markdown-it-checkbox<br>npm i markdown-it-imsize<br>npm i markdown-it-expandable<br>（该解决方法已改变，更改为kramed，具体看hexo初建站文章中数学公式问题）<br></code></pre></td></tr></table></figure>
 <p>参考：<br />
  <a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a><br />
  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42951560/article/details/123596899">https://blog.csdn.net/qq_42951560/article/details/123596899</a></p>

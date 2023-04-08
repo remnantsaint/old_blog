@@ -40,6 +40,8 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+<link rel="stylesheet" href="/css/monokai-hook.css">
 
   
   
@@ -394,7 +396,7 @@ hexo g #生成页面<br />
 hexo s #本地预览，用loacalhost:4000<br />
 npm install hexo-deployer-git --save<br />
 修改<code>\_config.yml</code>文件末尾部分为：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">  type: git  </span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git  </span><br><span class="line">  branch: main  </span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++">deploy:  <br>  type: git  <br>  repository: git@github.com:用户名/用户名.github.io.git  <br>  branch: main  <br></code></pre></td></tr></table></figure>
 <p>注意：main是主分支，以前主分支是master</p>
 <p>10.上传hexo：<br />
 hexo clean<br />
