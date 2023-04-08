@@ -17,16 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2023 | Remsait</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/page/2/index.html">
+  <title>Vim简单应用 | Remsait</title>
+  <meta name="description" content="1、模式转换 命令行模式可以输入i、a等进入编辑模式 编辑模式点击esc按键进入命令行模式 命令行模式点击shift+;进入低行模式  2、编辑模式 i 从目前光标所在处插入 I 在当前所在行的第一个非空字符处插入，可用0i替代 a 从当面光标所在的下一个字符处插入 A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代 o 在当前光标所在的下一行处插入新的一行 O 在当前光标所在的上一行后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim简单应用">
+<meta property="og:url" content="http://example.com/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、模式转换 命令行模式可以输入i、a等进入编辑模式 编辑模式点击esc按键进入命令行模式 命令行模式点击shift+;进入低行模式  2、编辑模式 i 从目前光标所在处插入 I 在当前所在行的第一个非空字符处插入，可用0i替代 a 从当面光标所在的下一个字符处插入 A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代 o 在当前光标所在的下一行处插入新的一行 O 在当前光标所在的上一行后">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-08T09:35:07.000Z">
+<meta property="article:modified_time" content="2023-04-08T10:50:31.293Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/archives/2023/page/2/index.html">
+  <link rel="canonical" href="http://example.com/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -36,6 +40,8 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
   
   
   
@@ -319,105 +325,210 @@
 
   
   
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope
+    itemtype="http://schema.org/WPSideBar">
+    <div class="slimContent">
+      <nav id="toc" class="article-toc">
+        <h3 class="toc-title">
+          文章目录
+        </h3>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text">1、模式转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-text">2、编辑模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E4%BD%8E%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-text">3、低行模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4%E3%80%81%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="toc-text">4、光标移动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5%E3%80%81%E6%92%A4%E5%9B%9E%E3%80%81%E5%88%A0%E9%99%A4%E3%80%81%E5%A4%8D%E5%88%B6%E5%92%8C%E7%B2%98%E8%B4%B4"><span class="toc-text">5、撤回、删除、复制和粘贴</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6%E3%80%81%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%9B%BF%E6%8D%A2"><span class="toc-text">6、搜索与替换</span></a></li></ol>
+      </nav>
+    </div>
+  </aside>
+  
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2023</h1>
-	      <p class="text-muted">共 16 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-  
+  <div class="content">
+  <article id="post-Vim简单应用" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Vim简单应用
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2023" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2023
-            </a>
-            <!-- <a href="/archives/2023" class="archive-year">2023</a> -->
-          </h3>
-        </div>
-        <div id="collapse2023" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2023">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2023/03/29/%E4%B8%80%E4%BA%9BTip/" class="collection-item"   itemprop="url">
-  <time datetime="2023-03-29T13:41:37.000Z" itemprop="datePublished">2023-03-29</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 一些tips
-</a>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/" class="article-date">
+	  <time datetime="2023-04-08T09:35:07.000Z" itemprop="datePublished">2023-04-08</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+  </span>
+
+        
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
 
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 669(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h5 id="1、模式转换"><a href="#1、模式转换" class="headerlink" title="1、模式转换"></a>1、模式转换</h5><ul>
+<li>命令行模式可以输入<code>i、a</code>等进入编辑模式</li>
+<li>编辑模式点击<code>esc</code>按键进入命令行模式</li>
+<li>命令行模式点击<code>shift+;</code>进入低行模式</li>
+</ul>
+<h5 id="2、编辑模式"><a href="#2、编辑模式" class="headerlink" title="2、编辑模式"></a>2、编辑模式</h5><ul>
+<li>i 从目前光标所在处插入</li>
+<li>I 在当前所在行的第一个非空字符处插入，可用0i替代</li>
+<li>a 从当面光标所在的下一个字符处插入</li>
+<li>A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代</li>
+<li>o 在当前光标所在的下一行处插入新的一行</li>
+<li>O 在当前光标所在的上一行后插入新的一行</li>
+<li>s 删除光标所在字符并开始插入</li>
+<li>S 删除光标所在行并开始插入</li>
+</ul>
+<h5 id="3、低行模式"><a href="#3、低行模式" class="headerlink" title="3、低行模式"></a>3、低行模式</h5><ul>
+<li>:w 保存文件但不退出vim</li>
+<li>:w file 将修改另外保存到file中，不退出vim</li>
+<li>:!w 强制保存，不推出vim</li>
+<li>:wq 保存文件并退出vim</li>
+<li>:!wq 强制保存文件，并退出vim</li>
+<li>:q 不保存文件，退出vi</li>
+<li>:!q 不保存文件，强制退出vim</li>
+<li>:!e 放弃所有修改，从上次保存文件开始再编辑命令历史</li>
+</ul>
+<h5 id="4、光标移动"><a href="#4、光标移动" class="headerlink" title="4、光标移动"></a>4、光标移动</h5><ul>
+<li>h 左移、l 右移、j 下移、k 上移</li>
+<li>n+空格 移动到这行该字符后第n个字符</li>
+<li>0 移动到该行最前面字符处</li>
+<li>^ 移动到该行最前面非空字符处</li>
+<li>$ 移动到该行最后</li>
+<li>gg 移动到第一行</li>
+<li>G 移动到最后一行</li>
+<li>ngg 或 nG 移动到第n行</li>
+<li>n 移动到光标下n行</li>
+</ul>
+<h5 id="5、撤回、删除、复制和粘贴"><a href="#5、撤回、删除、复制和粘贴" class="headerlink" title="5、撤回、删除、复制和粘贴"></a>5、撤回、删除、复制和粘贴</h5><ul>
+<li>u 撤销上一步操作</li>
+<li>ctrl+r 恢复上一步被撤销的操作</li>
+<li>. 重复上一步操作</li>
+<li>nx 向后删除n个字符</li>
+<li>X 向前删除一个字符</li>
+<li>ndd 删除光标所在的向下n行</li>
+<li>d1G 删除光标所在到第一行的全部数据</li>
+<li>dG 删除光标到最后一行</li>
+<li>d$ 删除光标到该行最后一个字符</li>
+<li>d0 删除光标到该行第一个字符</li>
+<li>nyy 复制光标所在的向下n行</li>
+<li>y1G 复制光标所在到第一行的全部数据</li>
+<li>yG 复制光标到最后一行</li>
+<li>y$ 复制光标到该行最后一个字符</li>
+<li>y0 复制光标到该行第一个字符</li>
+<li>p 粘贴到光标所在的前一行</li>
+<li>P 粘贴到光标所在的后一行</li>
+<li>J 光标所在行与下一行的数据结合成一行</li>
+</ul>
+<h5 id="6、搜索与替换"><a href="#6、搜索与替换" class="headerlink" title="6、搜索与替换"></a>6、搜索与替换</h5><ul>
+<li>/word 光标向下搜索并高亮第一个word</li>
+<li>搜索到后，n 向下搜索下一个word，N 向上反向</li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <!--<blockquote class="mt-2x">
+   <ul class="post-copyright list-unstyled">
+    
+   <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/" title="Vim简单应用" target="_blank" rel="external">http://example.com/2023/04/08/Vim简单应用/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>  
+  </ul>   
+</blockquote>  -->
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/remnantsaint" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/remnantsaint" target="_blank"><span class="text-dark">Remsait</span><small class="ml-1x"></small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
-    
-    
-<a href="/2023/03/24/%E6%8E%92%E5%BA%8F/" class="collection-item"   itemprop="url">
-  <time datetime="2023-03-24T12:33:17.000Z" itemprop="datePublished">2023-03-24</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 排序
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/03/22/%E5%9B%9E%E6%96%87%E6%95%B0/" class="collection-item"   itemprop="url">
-  <time datetime="2023-03-22T09:46:13.000Z" itemprop="datePublished">2023-03-22</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 回文数
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/01/08/%E4%BD%BF%E7%94%A8archlinux%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0/" class="collection-item"   itemprop="url">
-  <time datetime="2023-01-08T04:18:22.000Z" itemprop="datePublished">2023-01-08</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 使用archlinux参考文章
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
+  <section id="comments">
   	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
     
-    <nav class="bar bar-footer clearfix" data-stick-bottom>
-        <div class="bar-inner">
-        <ul class="pager pull-left">
-            
-            <li class="prev">
-                <a href="/archives/2023/">
-                    <i class="icon icon-angle-left"></i>
-                    上一页
-                </a>
-            </li>
-            
-            
-            <li class="next disabled">
-                <a href="javascript:;">
-                    下一页
-                    <i class="icon icon-angle-right"></i>                    
-                </a>
-            </li>
-            
-        </ul>
-            <div class="total-article bar-right">Page 2 of 2</div>
-        </div>
-    </nav>
     
- 	
+    <li class="next">
+      <a href="/2023/04/07/%E6%89%BE%E5%87%BA%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E7%9A%84%E5%85%A5%E7%8E%AF%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/" title="找出环形链表的入环第一个结点"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="" data-mobile-sites=""></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -482,6 +593,14 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
 
 
 

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-07T15:11:35.660Z</updated>
+  <updated>2023-04-08T10:50:31.293Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vim简单应用</title>
+    <link href="http://example.com/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/"/>
+    <id>http://example.com/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/</id>
+    <published>2023-04-08T09:35:07.000Z</published>
+    <updated>2023-04-08T10:50:31.293Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1、模式转换"><a href="#1、模式转换" class="headerlink" title="1、模式转换"></a>1、模式转换</h5><ul><li>命令行模式可以输入<code>i、a</code>等进入编辑模式</li><li>编辑模式点击<code>esc</code>按键进入命令行模式</li><li>命令行模式点击<code>shift+;</code>进入低行模式</li></ul><h5 id="2、编辑模式"><a href="#2、编辑模式" class="headerlink" title="2、编辑模式"></a>2、编辑模式</h5><ul><li>i 从目前光标所在处插入</li><li>I 在当前所在行的第一个非空字符处插入，可用0i替代</li><li>a 从当面光标所在的下一个字符处插入</li><li>A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代</li><li>o 在当前光标所在的下一行处插入新的一行</li><li>O 在当前光标所在的上一行后插入新的一行</li><li>s 删除光标所在字符并开始插入</li><li>S 删除光标所在行并开始插入</li></ul><h5 id="3、低行模式"><a href="#3、低行模式" class="headerlink" title="3、低行模式"></a>3、低行模式</h5><ul><li>:w 保存文件但不退出vim</li><li>:w file 将修改另外保存到file中，不退出vim</li><li>:!w 强制保存，不推出vim</li><li>:wq 保存文件并退出vim</li><li>:!wq 强制保存文件，并退出vim</li><li>:q 不保存文件，退出vi</li><li>:!q 不保存文件，强制退出vim</li><li>:!e 放弃所有修改，从上次保存文件开始再编辑命令历史</li></ul><h5 id="4、光标移动"><a href="#4、光标移动" class="headerlink" title="4、光标移动"></a>4、光标移动</h5><ul><li>h 左移、l 右移、j 下移、k 上移</li><li>n+空格 移动到这行该字符后第n个字符</li><li>0 移动到该行最前面字符处</li><li>^ 移动到该行最前面非空字符处</li><li>$ 移动到该行最后</li><li>gg 移动到第一行</li><li>G 移动到最后一行</li><li>ngg 或 nG 移动到第n行</li><li>n 移动到光标下n行</li></ul><h5 id="5、撤回、删除、复制和粘贴"><a href="#5、撤回、删除、复制和粘贴" class="headerlink" title="5、撤回、删除、复制和粘贴"></a>5、撤回、删除、复制和粘贴</h5><ul><li>u 撤销上一步操作</li><li>ctrl+r 恢复上一步被撤销的操作</li><li>. 重复上一步操作</li><li>nx 向后删除n个字符</li><li>X 向前删除一个字符</li><li>ndd 删除光标所在的向下n行</li><li>d1G 删除光标所在到第一行的全部数据</li><li>dG 删除光标到最后一行</li><li>d$ 删除光标到该行最后一个字符</li><li>d0 删除光标到该行第一个字符</li><li>nyy 复制光标所在的向下n行</li><li>y1G 复制光标所在到第一行的全部数据</li><li>yG 复制光标到最后一行</li><li>y$ 复制光标到该行最后一个字符</li><li>y0 复制光标到该行第一个字符</li><li>p 粘贴到光标所在的前一行</li><li>P 粘贴到光标所在的后一行</li><li>J 光标所在行与下一行的数据结合成一行</li></ul><h5 id="6、搜索与替换"><a href="#6、搜索与替换" class="headerlink" title="6、搜索与替换"></a>6、搜索与替换</h5><ul><li>/word 光标向下搜索并高亮第一个word</li><li>搜索到后，n 向下搜索下一个word，N 向上反向</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1、模式转换&quot;&gt;&lt;a href=&quot;#1、模式转换&quot; class=&quot;headerlink&quot; title=&quot;1、模式转换&quot;&gt;&lt;/a&gt;1、模式转换&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;命令行模式可以输入&lt;code&gt;i、a&lt;/code&gt;等进入编辑模式&lt;/li&gt;
+&lt;li&gt;编辑模式点击</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>找出环形链表的入环第一个结点</title>
