@@ -9213,3 +9213,15 @@ body.okayNav-loaded {
     max-height: 200px;
   }
 }
+
+.highlight .gutter pre{
+  /* 修改代码块左侧代码的行号 */
+  /*font-family: Consolas;*/
+  font-family: Inconsolata;
+}
+
+.highlight .code code{
+  /* 修改代码块右侧代码的字体 */
+  /*font-family: Consolas;*/
+  font-family: Inconsolata;
+}
