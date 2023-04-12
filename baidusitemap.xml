@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://example.com/2023/04/11/missing-semester/</loc>
+    <lastmod>2023-04-11</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2023/04/11/DFS-%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2023-04-11</lastmod>
   </url>
