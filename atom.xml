@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-11T14:40:41.621Z</updated>
+  <updated>2023-04-12T15:06:54.854Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,15 @@
     <link href="http://example.com/2023/04/11/missing-semester/"/>
     <id>http://example.com/2023/04/11/missing-semester/</id>
     <published>2023-04-11T14:39:53.000Z</published>
-    <updated>2023-04-11T14:40:41.621Z</updated>
+    <updated>2023-04-12T15:06:54.854Z</updated>
     
+    <content type="html"><![CDATA[<p>  Firstly, because I want to learn English, I will try to take notes in English. My English proficiency is not high, so I copied some of the original text. Please forgive me.</p><h3 id="topic-1-the-shell"><a class="markdownIt-Anchor" href="#topic-1-the-shell"></a> Topic 1: The Shell</h3><h4 id="what-is-the-shell"><a class="markdownIt-Anchor" href="#what-is-the-shell"></a> What is the shell?</h4><p>  When we use a variety of computer interfaces, we are often fundamentally restricted. In order to take full advantage of the tools our computer provides, we have to go old-school and drop down to a textual interface: the Shell.<br />  Nearly all platforms we can get our hands on have a Shell, although they may be slightly different. At their core, they are all roughly the same: they allow you to run programs, receive input, and inspect their output in a semi-structured way.<br />  In this course, we will focus on the Bourne Again Shell, or “bash” for short. This is one of the most widely used shells, and its syntax is similar to what we will see in many other shells. If we want to open a shell, we need a terminal.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  Firstly, because I want to learn English, I will try to take notes in English. My English proficiency is not high, so I copied some of </summary>
+      
     
     
     
