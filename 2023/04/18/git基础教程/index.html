@@ -18,12 +18,12 @@
   
   
   <title>Git基础教程 | Remsait</title>
-  <meta name="description" content="Git简介  安装Git 1.在Linux上安装Git 若在Debian和Ubuntu上，直接用sudo apt-get install git就能安装，若在老版本的Debian和Ubuntu，用sudo apt-get install git-core下载 其它版本可以直接通过源码安装。先从Git官网下载源码，然后解压，依次输入.&#x2F;config make sudo make install即可">
+  <meta name="description" content="Git简介 安装Git 1.在Linux上安装Git 若在Debian和Ubuntu上，直接用sudo apt-get install git就能安装，若在老版本的Debian和Ubuntu，用sudo apt-get install git-core下载 其它版本可以直接通过源码安装。先从Git官网下载源码，然后解压，依次输入.&#x2F;config make sudo make install即可 2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git基础教程">
 <meta property="og:url" content="http://example.com/2023/04/18/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Git简介  安装Git 1.在Linux上安装Git 若在Debian和Ubuntu上，直接用sudo apt-get install git就能安装，若在老版本的Debian和Ubuntu，用sudo apt-get install git-core下载 其它版本可以直接通过源码安装。先从Git官网下载源码，然后解压，依次输入.&#x2F;config make sudo make install即可">
+<meta property="og:description" content="Git简介 安装Git 1.在Linux上安装Git 若在Debian和Ubuntu上，直接用sudo apt-get install git就能安装，若在老版本的Debian和Ubuntu，用sudo apt-get install git-core下载 其它版本可以直接通过源码安装。先从Git官网下载源码，然后解压，依次输入.&#x2F;config make sudo make install即可 2">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-18T11:12:39.000Z">
 <meta property="article:modified_time" content="2023-04-18T13:11:53.003Z">
@@ -334,7 +334,7 @@
         <h3 class="toc-title">
           文章目录
         </h3>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#git%E7%AE%80%E4%BB%8B"><span class="toc-text"> Git简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85git"><span class="toc-text"> 安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93"><span class="toc-text"> 创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E5%85%89%E6%9C%BA%E7%A9%BF%E6%A2%AD"><span class="toc-text"> 时光机穿梭</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="toc-text"> 版本回退</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E7%AE%80%E4%BB%8B"><span class="toc-text">Git简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93"><span class="toc-text">创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E5%85%89%E6%9C%BA%E7%A9%BF%E6%A2%AD"><span class="toc-text">时光机穿梭</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="toc-text">版本回退</span></a></li></ol></li></ol>
       </nav>
     </div>
   </aside>
@@ -390,32 +390,32 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="git简介"><a class="markdownIt-Anchor" href="#git简介"></a> Git简介</h3>
-<h3 id="安装git"><a class="markdownIt-Anchor" href="#安装git"></a> 安装Git</h3>
+        <h3 id="Git简介">Git简介</h3>
+<h3 id="安装Git">安装Git</h3>
 <p>1.在Linux上安装Git</p>
 <p>若在Debian和Ubuntu上，直接用<code>sudo apt-get install git</code>就能安装，若在老版本的Debian和Ubuntu，用<code>sudo apt-get install git-core</code>下载</p>
 <p>其它版本可以直接通过源码安装。先从Git官网下载源码，然后解压，依次输入<code>./config</code> <code>make</code> <code>sudo make install</code>即可</p>
 <p>2.在Windows上安装Git</p>
 <p>在官网下载安装程序，然后默认选项安装，有Git Bash就说明安装成功</p>
-<p>安装完成后还需要最后一步配置，在命令行输入：<br />
-<code>$ git config --global user.name &quot;Your Name&quot;（GitHub用户名）</code><br />
-<code>$ git config --global user.email &quot;email@example.com&quot;（GitHub邮箱）</code><br />
+<p>安装完成后还需要最后一步配置，在命令行输入：<br>
+<code>$ git config --global user.name &quot;Your Name&quot;（GitHub用户名）</code><br>
+<code>$ git config --global user.email &quot;email@example.com&quot;（GitHub邮箱）</code><br>
 因为Git是分布式版本控制，所以，每个机器都必须自报家门：你的名字和Email地址。</p>
 <p>注意<code>git config</code>命令的<code>--global</code>参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址</p>
-<h3 id="创建版本库"><a class="markdownIt-Anchor" href="#创建版本库"></a> 创建版本库</h3>
+<h3 id="创建版本库">创建版本库</h3>
 <p>版本库即repository，可以简单理解成一个目录，这个目录里所有的文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时候都可以追踪历史，或者在将来某个时刻可以还原。</p>
-<p>所以，创建一个版本库非常简单，首先选择一个合适的地方，创建一个空目录，以下操作都在该目录中进行：<br />
-<code> $ mkdir learngit</code><br />
-<code> $ cd learngit</code><br />
-第二步，用<code>git init</code>命令把这个目录变成Git可以管理的仓库：<br />
-<code> $ git init</code><br />
+<p>所以，创建一个版本库非常简单，首先选择一个合适的地方，创建一个空目录，以下操作都在该目录中进行：<br>
+<code> $ mkdir learngit</code><br>
+<code> $ cd learngit</code><br>
+第二步，用<code>git init</code>命令把这个目录变成Git可以管理的仓库：<br>
+<code> $ git init</code><br>
 初始化后，目录下会多一个<code>.git</code>目录，默认隐藏，这个目录是来跟踪管理版本库的，不要改动。</p>
 <p>所有的版本控制系统，只能跟踪文本文件的改动，比如在一个文件的第几行盖了什么。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB</p>
 <p>不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的。</p>
 <p>强烈建议使用UTF-8编码来编写文件。使用windows需要注意千万不要使用Windows自带的记事本编辑任何文本文件，原因是Microsoft开发记事本的团队在每个文件开头添加了0x3fbbbf的字符，会导致错误</p>
 <p>首先编写一个<code>readme.txt</code>文件，用<code>git add readme.txt</code>命令告诉Git将该文件添加到仓库，用<code>git commit -m &quot;wrote a readme file&quot;</code>告诉Git，把文件提交到仓库，<code>-m</code>后面输入的是本次提交的说明</p>
-<h3 id="时光机穿梭"><a class="markdownIt-Anchor" href="#时光机穿梭"></a> 时光机穿梭</h3>
-<h4 id="版本回退"><a class="markdownIt-Anchor" href="#版本回退"></a> 版本回退</h4>
+<h3 id="时光机穿梭">时光机穿梭</h3>
+<h4 id="版本回退">版本回退</h4>
 <p>我们已经成功添加并提交了一个readme.txt文件，现在，可以继续修改readme.txt文件，然后运行<code>git status</code>查看结果</p>
 <p><code>git status</code>命令让我们时刻掌握仓库当前的状态，命令的输出告诉我们呢，<code>readme.txt</code>被改动过了，但还没有准备提交的修改</p>
 <p>如果想查看怎么修改的<code>readme.txt</code>文件，可以使用<code>git diff</code>这个命令，结果如下</p>

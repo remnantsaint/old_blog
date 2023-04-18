@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/04/11/missing-semester/</loc>
+    <loc>http://example.com/2022/12/29/markdown%E7%9A%84%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/</loc>
     
     <lastmod>2023-04-18</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/12/29/markdown%E7%9A%84%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95/</loc>
+    <loc>http://example.com/2023/04/11/missing-semester/</loc>
     
     <lastmod>2023-04-18</lastmod>
     
@@ -227,7 +227,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/links/index.html</loc>
+    <loc>http://example.com/repository/index.html</loc>
     
     <lastmod>2022-12-27</lastmod>
     
@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/repository/index.html</loc>
+    <loc>http://example.com/links/index.html</loc>
     
     <lastmod>2022-12-27</lastmod>
     
