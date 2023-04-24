@@ -18,12 +18,12 @@
   
   
   <title>Vim简单应用 | Remsait</title>
-  <meta name="description" content="1、模式转换  命令行模式可以输入i、a等进入编辑模式 编辑模式点击esc按键进入命令行模式 命令行模式点击shift+;进入低行模式   2、编辑模式  i 从目前光标所在处插入 I 在当前所在行的第一个非空字符处插入，可用0i替代 a 从当面光标所在的下一个字符处插入 A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代 o 在当前光标所在的下一行处插入新的一行 O 在当前光标所在的">
+  <meta name="description" content="1、模式转换  命令行模式可以输入i、a等进入编辑模式 编辑模式点击esc按键进入命令行模式 命令行模式点击shift+;进入低行模式  2、编辑模式  i 从目前光标所在处插入 I 在当前所在行的第一个非空字符处插入，可用0i替代 a 从当面光标所在的下一个字符处插入 A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代 o 在当前光标所在的下一行处插入新的一行 O 在当前光标所在的上一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim简单应用">
 <meta property="og:url" content="http://example.com/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、模式转换  命令行模式可以输入i、a等进入编辑模式 编辑模式点击esc按键进入命令行模式 命令行模式点击shift+;进入低行模式   2、编辑模式  i 从目前光标所在处插入 I 在当前所在行的第一个非空字符处插入，可用0i替代 a 从当面光标所在的下一个字符处插入 A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代 o 在当前光标所在的下一行处插入新的一行 O 在当前光标所在的">
+<meta property="og:description" content="1、模式转换  命令行模式可以输入i、a等进入编辑模式 编辑模式点击esc按键进入命令行模式 命令行模式点击shift+;进入低行模式  2、编辑模式  i 从目前光标所在处插入 I 在当前所在行的第一个非空字符处插入，可用0i替代 a 从当面光标所在的下一个字符处插入 A 从当前光标所在行的最后一个字符处开始插入，可以用$a替代 o 在当前光标所在的下一行处插入新的一行 O 在当前光标所在的上一">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-08T09:35:07.000Z">
 <meta property="article:modified_time" content="2023-04-09T15:16:55.593Z">
@@ -334,7 +334,7 @@
         <h3 class="toc-title">
           文章目录
         </h3>
-        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text"> 1、模式转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-text"> 2、编辑模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E4%BD%8E%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-text"> 3、低行模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="toc-text"> 4、光标移动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E6%92%A4%E5%9B%9E-%E5%88%A0%E9%99%A4-%E5%A4%8D%E5%88%B6%E5%92%8C%E7%B2%98%E8%B4%B4"><span class="toc-text"> 5、撤回、删除、复制和粘贴</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%9B%BF%E6%8D%A2"><span class="toc-text"> 6、搜索与替换</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text">1、模式转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-text">2、编辑模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E4%BD%8E%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-text">3、低行模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4%E3%80%81%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="toc-text">4、光标移动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5%E3%80%81%E6%92%A4%E5%9B%9E%E3%80%81%E5%88%A0%E9%99%A4%E3%80%81%E5%A4%8D%E5%88%B6%E5%92%8C%E7%B2%98%E8%B4%B4"><span class="toc-text">5、撤回、删除、复制和粘贴</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6%E3%80%81%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%9B%BF%E6%8D%A2"><span class="toc-text">6、搜索与替换</span></a></li></ol>
       </nav>
     </div>
   </aside>
@@ -390,13 +390,13 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h5 id="1-模式转换"><a class="markdownIt-Anchor" href="#1-模式转换"></a> 1、模式转换</h5>
+        <h5 id="1、模式转换">1、模式转换</h5>
 <ul>
 <li>命令行模式可以输入<code>i、a</code>等进入编辑模式</li>
 <li>编辑模式点击<code>esc</code>按键进入命令行模式</li>
 <li>命令行模式点击<code>shift+;</code>进入低行模式</li>
 </ul>
-<h5 id="2-编辑模式"><a class="markdownIt-Anchor" href="#2-编辑模式"></a> 2、编辑模式</h5>
+<h5 id="2、编辑模式">2、编辑模式</h5>
 <ul>
 <li>i 从目前光标所在处插入</li>
 <li>I 在当前所在行的第一个非空字符处插入，可用0i替代</li>
@@ -407,7 +407,7 @@
 <li>s 删除光标所在字符并开始插入</li>
 <li>S 删除光标所在行并开始插入</li>
 </ul>
-<h5 id="3-低行模式"><a class="markdownIt-Anchor" href="#3-低行模式"></a> 3、低行模式</h5>
+<h5 id="3、低行模式">3、低行模式</h5>
 <ul>
 <li>:w 保存文件但不退出vim</li>
 <li>:w file 将修改另外保存到file中，不退出vim</li>
@@ -418,7 +418,7 @@
 <li>:!q 不保存文件，强制退出vim</li>
 <li>:!e 放弃所有修改，从上次保存文件开始再编辑命令历史</li>
 </ul>
-<h5 id="4-光标移动"><a class="markdownIt-Anchor" href="#4-光标移动"></a> 4、光标移动</h5>
+<h5 id="4、光标移动">4、光标移动</h5>
 <ul>
 <li>h 左移、l 右移、j 下移、k 上移</li>
 <li>n+空格 移动到这行该字符后第n个字符</li>
@@ -430,7 +430,7 @@
 <li>ngg 或 nG 移动到第n行</li>
 <li>n 移动到光标下n行</li>
 </ul>
-<h5 id="5-撤回-删除-复制和粘贴"><a class="markdownIt-Anchor" href="#5-撤回-删除-复制和粘贴"></a> 5、撤回、删除、复制和粘贴</h5>
+<h5 id="5、撤回、删除、复制和粘贴">5、撤回、删除、复制和粘贴</h5>
 <ul>
 <li>u 撤销上一步操作</li>
 <li>ctrl+r 恢复上一步被撤销的操作</li>
@@ -451,7 +451,7 @@
 <li>P 粘贴到光标所在的后一行</li>
 <li>J 光标所在行与下一行的数据结合成一行</li>
 </ul>
-<h5 id="6-搜索与替换"><a class="markdownIt-Anchor" href="#6-搜索与替换"></a> 6、搜索与替换</h5>
+<h5 id="6、搜索与替换">6、搜索与替换</h5>
 <ul>
 <li>/word 光标向下搜索并高亮第一个word</li>
 <li>搜索到后，n 向下搜索下一个word，N 向上反向</li>
