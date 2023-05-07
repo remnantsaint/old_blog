@@ -17,21 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>反转链表 | Remsait</title>
-  <meta name="description" content="难度：简单 题目链接：https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;reverse-linked-list&#x2F;description&#x2F; 题意：给出一个链表的头结点（首元结点），将该链表反转后，返回反转后的链表 题解：  方法一：迭代 直接在遍历链表的过程中原地修改，将当前结点的next指针改为指向前一个节点，然后将p和pre结点都后移，需要借助p的后面结点，所以循环的开始先定义一个q&#x3D;p">
-<meta property="og:type" content="article">
-<meta property="og:title" content="反转链表">
-<meta property="og:url" content="http://example.com/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/index.html">
+  <title>归档: 2023 | Remsait</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/archives/2023/page/3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="难度：简单 题目链接：https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;reverse-linked-list&#x2F;description&#x2F; 题意：给出一个链表的头结点（首元结点），将该链表反转后，返回反转后的链表 题解：  方法一：迭代 直接在遍历链表的过程中原地修改，将当前结点的next指针改为指向前一个节点，然后将p和pre结点都后移，需要借助p的后面结点，所以循环的开始先定义一个q&#x3D;p">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-02T12:47:07.000Z">
-<meta property="article:modified_time" content="2023-04-03T13:20:57.862Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/index.html">
+  <link rel="canonical" href="http://example.com/archives/2023/page/3/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -44,8 +39,6 @@
   
 <link rel="stylesheet" href="/css/monokai-hook.css">
 
-  
-    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
   
   
   
@@ -331,147 +324,74 @@
   
   
 <main class="main" role="main">
-  <div class="content">
-  <article id="post-反转链表" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-    
-    <div class="article-header">
-      
-        
+  	<article class="content article article-archives article-type-list" itemscope="">
+	    <header class="article-header">
+	      <h1 itemprop="title">归档: 2023</h1>
+	      <p class="text-muted">共 23 篇文章</p>
+	    </header>
+	    <div class="article-body">
+	      
   
-    <h1 class="article-title" itemprop="name">
-      反转链表
-    </h1>
-  
-
-      
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="article-date">
-	  <time datetime="2023-04-02T12:47:07.000Z" itemprop="datePublished">2023-04-02</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a>
-  </span>
-
-
-        
-	<span class="article-read hidden-xs">
-	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
-	    <span id="busuanzi_container_page_pv">
-			<span id="busuanzi_value_page_pv">0</span>
-		</span>
-	</span>
-
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/#comments" class="article-comment-link">评论</a></span>
-        
-	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 450(字)</span>
-	
-	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
-	
-
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p>难度：简单<br />
-题目链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/description/">https://leetcode.cn/problems/reverse-linked-list/description/</a><br />
-题意：给出一个链表的头结点（首元结点），将该链表反转后，返回反转后的链表<br />
-题解：</p>
-<h5 id="方法一迭代"><a class="markdownIt-Anchor" href="#方法一迭代"></a> 方法一：迭代</h5>
-<p>直接在遍历链表的过程中原地修改，将当前结点的next指针改为指向前一个节点，然后将p和pre结点都后移，需要借助p的后面结点，所以循环的开始先定义一个q=p-&gt;next;</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * struct ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode *next;</span><br><span class="hljs-comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span><br><span class="hljs-comment"> * &#125;;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode* head)</span> </span>&#123;<br>        ListNode *pre,*p;<br>        pre=<span class="hljs-literal">NULL</span>;<span class="hljs-comment">//pre一开始在头结点</span><br>        p=head;<span class="hljs-comment">//p一开始在首元结点</span><br>        <span class="hljs-keyword">while</span>(p!=<span class="hljs-literal">NULL</span>)&#123;<br>            ListNode *q=p-&gt;next;<br>            p-&gt;next=pre;<span class="hljs-comment">//改变p点的指针指向</span><br>            pre=p;<span class="hljs-comment">//将pre移向下一个结点</span><br>            p=q;<span class="hljs-comment">//将p移向下一个结点</span><br>        &#125;<br>        <span class="hljs-keyword">return</span> pre;<span class="hljs-comment">//遍历到结尾时，pre在最后一个结点</span><br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h5 id="方法二递归"><a class="markdownIt-Anchor" href="#方法二递归"></a> 方法二：递归</h5>
-<p>一直递归到倒数第二个结点，找到结果头结点newhead，然后执行head-&gt;next-&gt;next=null反转最后一个结点和倒数第二个结点的指针，改变head-&gt;next=NULL，然后回退挨个反转。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode* head)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(head==<span class="hljs-literal">NULL</span>||head-&gt;next==<span class="hljs-literal">NULL</span>)&#123;<span class="hljs-comment">//为什么head==NULL?  测试用例有空链表</span><br>            <span class="hljs-keyword">return</span> head;<span class="hljs-comment">//最后返回的是最后一个结点，让newhead等于最后一个结点</span><br>        &#125;<br>        ListNode *newhead = <span class="hljs-built_in">reverseList</span>(head-&gt;next);<span class="hljs-comment">//注意，只会执行一次</span><br>        head-&gt;next-&gt;next=head;<span class="hljs-comment">//该行代码第一次执行时是倒数第二个结点，反转指针</span><br>        head-&gt;next=<span class="hljs-literal">NULL</span>;<span class="hljs-comment">//提前定义空指针</span><br>        <span class="hljs-keyword">return</span> newhead;<span class="hljs-comment">//一直返回最后的头结点</span><br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-      
-    </div>
-    <div class="article-footer">
-      <!--<blockquote class="mt-2x">
-   <ul class="post-copyright list-unstyled">
-    
-   <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="http://example.com/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" title="反转链表" target="_blank" rel="external">http://example.com/2023/04/02/反转链表/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>  
-  </ul>   
-</blockquote>  -->
-
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/remnantsaint" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/remnantsaint" target="_blank"><span class="text-dark">Remsait</span><small class="ml-1x"></small></a></h3>
-        <div></div>
-      </div>
-    </figure>
-  </div>
-</div>
-
-
-    </div>
-  </article>
   
     
-  <section id="comments">
+    
+      
+      
+      <section class="panel panel-default b-no">
+        <div class="panel-heading" role="tab">
+          <h3 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2023" aria-expanded="true">
+              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
+              2023
+            </a>
+            <!-- <a href="/archives/2023" class="archive-year">2023</a> -->
+          </h3>
+        </div>
+        <div id="collapse2023" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2023">
+        <div class="panel-body">
+          <div class="collection">
+    
+    
+<a href="/2023/01/08/%E4%BD%BF%E7%94%A8archlinux%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0/" class="collection-item"   itemprop="url">
+  <time datetime="2023-01-08T04:18:22.620Z" itemprop="datePublished">2023-01-08</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> 使用archlinux参考文章
+</a>
+
+
+  
+  
+    </div></div></div></section>
+  
+
+	    </div>
+  	</article>
   	
-  </section>
-
-
-  
-</div>
-
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
-  
-  <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%83%A8%E5%88%86%E9%93%BE%E8%A1%A8/" title="反转部分链表"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev">
+                <a href="/archives/2023/page/2/">
+                    <i class="icon icon-angle-left"></i>
+                    上一页
+                </a>
+            </li>
+            
+            
+            <li class="next disabled">
+                <a href="javascript:;">
+                    下一页
+                    <i class="icon icon-angle-right"></i>                    
+                </a>
+            </li>
+            
+        </ul>
+            <div class="total-article bar-right">Page 3 of 3</div>
+        </div>
+    </nav>
     
-    
-    <li class="next">
-      <a href="/2023/04/02/%E8%BF%AD%E4%BB%A3-%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB/" title="迭代&amp;递归&amp;分治"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="" data-mobile-sites=""></div>
-    
-  </div>
-  </div>
-</nav>
-  
-
-
+ 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -537,14 +457,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-   
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-
-   
 
 
 
