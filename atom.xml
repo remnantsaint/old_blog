@@ -40,11 +40,11 @@
   </entry>
   
   <entry>
-    <title>linux常用</title>
+    <title>linux一些命令</title>
     <link href="http://example.com/2023/05/02/linux%E5%B8%B8%E7%94%A8/"/>
     <id>http://example.com/2023/05/02/linux%E5%B8%B8%E7%94%A8/</id>
     <published>2023-05-02T03:09:33.000Z</published>
-    <updated>2023-05-06T13:18:42.237Z</updated>
+    <updated>2023-05-07T09:50:45.663Z</updated>
     
     <content type="html"><![CDATA[<p><code>du -sh</code>查看文件夹大小；<code>du -sh *</code>查看该文件夹下每个文件或文件夹的大小</p><p><code>systemctl start &lt;service&gt;</code>开启服务<br /><code>systemctl enable &lt;service&gt;</code>服务开机自启动<br /><code>systemctl restert &lt;service&gt;</code>重启服务<br /><code>systemctl list-unit-files</code>查看服务列表</p>]]></content>
     
@@ -58,7 +58,7 @@
     
     
     
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
     
     
   </entry>
