@@ -17,21 +17,18 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>合并有序链表 | Remsait</title>
-  <meta name="description" content="难度：简单 链接：https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;merge-two-sorted-lists&#x2F; 题意：给两个有序链表，将其合并为一个链表并返回首元结点。 题解：   假设将list2合并到list1上，先定义虚拟头结点和pre，遍历两个链表，如果list2&gt;list1，就让list1和pre后移，否则list2&lt;&#x3D;list1将q-&gt;val&#x3D;list2-">
-<meta property="og:type" content="article">
-<meta property="og:title" content="合并有序链表">
-<meta property="og:url" content="http://example.com/2023/04/04/%E5%90%88%E5%B9%B6%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/index.html">
+  <title>DFS（图论） | Remsait</title>
+  <meta property="og:type" content="article">
+<meta property="og:title" content="DFS（图论）">
+<meta property="og:url" content="http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="难度：简单 链接：https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;merge-two-sorted-lists&#x2F; 题意：给两个有序链表，将其合并为一个链表并返回首元结点。 题解：   假设将list2合并到list1上，先定义虚拟头结点和pre，遍历两个链表，如果list2&gt;list1，就让list1和pre后移，否则list2&lt;&#x3D;list1将q-&gt;val&#x3D;list2-">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-04T13:42:25.000Z">
-<meta property="article:modified_time" content="2023-04-05T14:53:10.899Z">
+<meta property="article:published_time" content="2023-05-09T14:19:58.000Z">
+<meta property="article:modified_time" content="2023-05-09T14:20:20.173Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2023/04/04/%E5%90%88%E5%B9%B6%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/index.html">
+  <link rel="canonical" href="http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -330,16 +327,28 @@
 
   
   
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope
+    itemtype="http://schema.org/WPSideBar">
+    <div class="slimContent">
+      <nav id="toc" class="article-toc">
+        <h3 class="toc-title">
+          文章目录
+        </h3>
+        
+      </nav>
+    </div>
+  </aside>
+  
 <main class="main" role="main">
   <div class="content">
-  <article id="post-合并有序链表" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-DFS（图论）" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      合并有序链表
+      DFS（图论）
     </h1>
   
 
@@ -347,22 +356,17 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2023/04/04/%E5%90%88%E5%B9%B6%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/" class="article-date">
-	  <time datetime="2023-04-04T13:42:25.000Z" itemprop="datePublished">2023-04-04</time>
+	<a href="/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/" class="article-date">
+	  <time datetime="2023-05-09T14:19:58.000Z" itemprop="datePublished">2023-05-09</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+    <a class="article-category-link" href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>
   </span>
 
         
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a>
-  </span>
-
 
         
 	<span class="article-read hidden-xs">
@@ -373,10 +377,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/04/04/%E5%90%88%E5%B9%B6%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 266(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -386,13 +390,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>难度：简单<br>
-链接：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-two-sorted-lists/">https://leetcode.cn/problems/merge-two-sorted-lists/</a><br>
-题意：给两个有序链表，将其合并为一个链表并返回首元结点。<br>
-题解：<br>
-  假设将list2合并到list1上，先定义虚拟头结点和pre，遍历两个链表，如果list2&gt;list1，就让list1和pre后移，否则list2&lt;=list1将q-&gt;val=list2-&gt;val插入到pre和list之间。遍历到list2结束，如果此时list1有剩余可以不处理，如果list2有剩余，就让pre-&gt;next=list2</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * struct ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode *next;</span><br><span class="hljs-comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span><br><span class="hljs-comment"> * &#125;;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">mergeTwoLists</span><span class="hljs-params">(ListNode* list1, ListNode* list2)</span> </span>&#123;<br>        ListNode *dummynode = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ListNode</span>();<br>        dummynode-&gt;next=list1;<span class="hljs-comment">//定义头结点很方便</span><br>        ListNode *pre=dummynode;<br>        <span class="hljs-keyword">while</span>(list1!=<span class="hljs-literal">NULL</span>&amp;&amp;list2!=<span class="hljs-literal">NULL</span>)&#123;<br>            <span class="hljs-keyword">if</span>(list2-&gt;val&gt;list1-&gt;val)&#123;<br>                list1=list1-&gt;next;<br>                pre=pre-&gt;next;<br>            &#125;<br>            <span class="hljs-keyword">else</span>&#123;<br>                ListNode *q=<span class="hljs-keyword">new</span> <span class="hljs-built_in">ListNode</span>();<br>                q-&gt;val=list2-&gt;val;<br>                pre-&gt;next=q;<br>                q-&gt;next=list1;<br>                list2=list2-&gt;next; <br>                pre=pre-&gt;next;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(list1==<span class="hljs-literal">NULL</span>)&#123;<br>            pre-&gt;next=list2;<br>        &#125;<br>        <span class="hljs-keyword">return</span> dummynode-&gt;next;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
+        
       
     </div>
     <div class="article-footer">
@@ -401,7 +399,7 @@
     
    <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2023/04/04/%E5%90%88%E5%B9%B6%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/" title="合并有序链表" target="_blank" rel="external">http://example.com/2023/04/04/合并有序链表/</a>
+      <a href="http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/" title="DFS（图论）" target="_blank" rel="external">http://example.com/2023/05/09/DFS（图论）/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -445,15 +443,19 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2023/04/05/%E5%AF%B9%E9%93%BE%E8%A1%A8%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" title="对链表插入排序"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2023/04/03/%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/" title="重排链表"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2023/05/07/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" title="图的存储"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
   </ul>
   

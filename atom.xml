@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-09T14:15:41.190Z</updated>
+  <updated>2023-05-09T14:20:20.173Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DFS（图论）</title>
+    <link href="http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/"/>
+    <id>http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/</id>
+    <published>2023-05-09T14:19:58.000Z</published>
+    <updated>2023-05-09T14:20:20.173Z</updated>
+    
+    
+    
+    
+    <category term="图论" scheme="http://example.com/categories/%E5%9B%BE%E8%AE%BA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>图的存储</title>
@@ -489,33 +504,6 @@
     
     <category term="算法基础" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>回文数</title>
-    <link href="http://example.com/2023/03/22/%E5%9B%9E%E6%96%87%E6%95%B0/"/>
-    <id>http://example.com/2023/03/22/%E5%9B%9E%E6%96%87%E6%95%B0/</id>
-    <published>2023-03-22T09:46:13.000Z</published>
-    <updated>2023-03-24T14:06:34.665Z</updated>
-    
-    <content type="html"><![CDATA[<h1>[NOIP1999 普及组] 回文数</h1><h2 id="题目描述">题目描述</h2><p>若一个数（首位不为零）从左向右读与从右向左读都一样，我们就将其称之为回文数。</p><p>例如：给定一个十进制数 $56$，将 $56$ 加 $65$（即把 $56$ 从右向左读），得到 $121$ 是一个回文数。</p><p>又如：对于十进制数 $87$：</p><p>STEP1：$87+78=165$<br>STEP2：$165+561=726$<br>STEP3：$726+627=1353$<br>STEP4：$1353+3531=4884$</p><p>在这里的一步是指进行了一次 $N$ 进制的加法，上例最少用了 $4$ 步得到回文数 $4884$。</p><p>写一个程序，给定一个 $N$（$2 \le N \le 10$ 或 $N=16$）进制数 $M$（$100$ 位之内），求最少经过几步可以得到回文数。如果在 $30$ 步以内（包含 $30$ 步）不可能得到回文数，则输出 <code>Impossible!</code>。</p><h2 id="输入格式">输入格式</h2><p>两行，分别是 $N$，$M$。</p><h2 id="输出格式">输出格式</h2><p>如果能在 $30$ 步以内得到回文数，输出格式形如 <code>STEP=ans</code>，其中 $\text{ans}$ 为最少得到回文数的步数。</p><p>否则输出 <code>Impossible!</code>。</p><h2 id="样例-1">样例 #1</h2><h3 id="样例输入-1">样例输入 #1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-number">10</span><br><span class="hljs-number">87</span><br></code></pre></td></tr></table></figure><h3 id="样例输出-1">样例输出 #1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">STEP=<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure><h2 id="题解">题解</h2><p>本题用到了高精度加，需要注意的是不需要转换进制</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">105</span>;<br><span class="hljs-type">int</span> n, q[N], l, w[N], ans;<br>string s;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> <span class="hljs-comment">// 得到每位的十进制</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = s.<span class="hljs-built_in">length</span>() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (s[i] &gt;= <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; s[i] &lt;= <span class="hljs-string">&#x27;9&#x27;</span>)<br>        &#123;<br>            j++; <span class="hljs-comment">// 数组q第一位有效是q[1]</span><br>            q[j] = s[i] - <span class="hljs-string">&#x27;0&#x27;</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            j++;<br>            q[j] = s[i] - <span class="hljs-string">&#x27;A&#x27;</span> + <span class="hljs-number">10</span>;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">judge</span><span class="hljs-params">(<span class="hljs-type">int</span> a[])</span> <span class="hljs-comment">// 判断是否为回文数</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> ln = l;<br>    <span class="hljs-type">int</span> i = <span class="hljs-number">1</span>, j = l;<br>    <span class="hljs-keyword">while</span> (ln--)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (ln &lt; l / <span class="hljs-number">2</span>)<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">if</span> (a[i] != a[j])<br>        &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; <span class="hljs-comment">// 不是回文返回0</span><br>        &#125;<br>        i++;<br>        j--;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">turn</span><span class="hljs-params">(<span class="hljs-type">int</span> a[])</span> <span class="hljs-comment">// 翻转数组</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = l; i &gt;= <span class="hljs-number">1</span>; i--)<br>    &#123;<br>        w[++j] = a[i];<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">int</span> a[], <span class="hljs-type">int</span> b[])</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= l; i++)<br>    &#123;<br>        a[i] = a[i] + b[i];<br>        a[i + <span class="hljs-number">1</span>] = a[i + <span class="hljs-number">1</span>] + a[i] / n; <span class="hljs-comment">// 进位</span><br>        a[i] = a[i] % n;                <span class="hljs-comment">// 注意，此处%n和/n表示所有进制通用</span><br>    &#125;<br>    <span class="hljs-keyword">if</span> (a[l + <span class="hljs-number">1</span>] &gt; <span class="hljs-number">0</span>)<br>    &#123; <span class="hljs-comment">// 最高位进位了</span><br>        l++;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    cin &gt;&gt; n &gt;&gt; s;<br>    <span class="hljs-built_in">init</span>(); <span class="hljs-comment">// 把s字符串存入q数组中</span><br>    l = s.<span class="hljs-built_in">length</span>();<br>    <span class="hljs-keyword">while</span> (!<span class="hljs-built_in">judge</span>(q)) <span class="hljs-comment">// 不是回文继续循环</span><br>    &#123;<br>        <span class="hljs-built_in">turn</span>(q);<br>        <span class="hljs-built_in">add</span>(q, w);<br>        ans++;<br>        <span class="hljs-keyword">if</span> (ans &gt; <span class="hljs-number">30</span>)<br>            <span class="hljs-keyword">break</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (ans &gt; <span class="hljs-number">30</span>)<br>        cout &lt;&lt; <span class="hljs-string">&quot;Impossible!&quot;</span> &lt;&lt; endl;<br>    <span class="hljs-keyword">else</span><br>        cout &lt;&lt; <span class="hljs-string">&quot;STEP=&quot;</span> &lt;&lt; ans &lt;&lt; endl;<br>    <span class="hljs-built_in">system</span>(<span class="hljs-string">&quot;pause&quot;</span>);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;[NOIP1999 普及组] 回文数&lt;/h1&gt;
-&lt;h2 id=&quot;题目描述&quot;&gt;题目描述&lt;/h2&gt;
-&lt;p&gt;若一个数（首位不为零）从左向右读与从右向左读都一样，我们就将其称之为回文数。&lt;/p&gt;
-&lt;p&gt;例如：给定一个十进制数 $56$，将 $56$ 加 $65$（即把 $56$ </summary>
-      
-    
-    
-    
-    <category term="题解" scheme="http://example.com/categories/%E9%A2%98%E8%A7%A3/"/>
-    
-    
-    <category term="高精度" scheme="http://example.com/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/"/>
     
   </entry>
   
