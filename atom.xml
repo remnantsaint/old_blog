@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-09T14:20:20.173Z</updated>
+  <updated>2023-05-13T03:55:03.512Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,16 @@
     <link href="http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/"/>
     <id>http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/</id>
     <published>2023-05-09T14:19:58.000Z</published>
-    <updated>2023-05-09T14:20:20.173Z</updated>
+    <updated>2023-05-13T03:55:03.512Z</updated>
     
+    <content type="html"><![CDATA[<h4 id="引入"><a class="markdownIt-Anchor" href="#引入"></a> 引入</h4><p>DFS全称是<a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth First Search</a>，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法。深度优先就是每次都尝试向更深的节点走。</p><p>该算法和常与BFS并列，但两者除了都能遍历图的连通块意外，用途完全不同，很少能混用两种算法</p><p>DFS常常用来代指用递归函数实现的搜索，但实际上两者并不一样，有关参考<a href="https://www.remsait.com/2023/04/11/DFS-%E6%90%9C%E7%B4%A2/">DFS(搜索)</a></p><h4 id="过程"><a class="markdownIt-Anchor" href="#过程"></a> 过程</h4><p>DFS 最显著的特征在于其<strong>递归调用自身</strong>。同时与BFS类似，DFS会对其访问过的点打上标记，在遍历图时跳过已打标记的点，以确保<strong>每个点仅访问一次</strong>，符合以上两点便是广义上的DFS</p><p>具体地说，DFS大致结构如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">//只包含DFS必须的主要结构，实际的DFS会在以上代码基础上加入一些代码，利用DFS性质进行其它操作<br>DFS(v) // v 可以是图中的一个顶点，也可以是抽象的概念，如 dp 状态等。<br>  在 v 上打访问标记<br>  <span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> v 的相邻节点<br>    <span class="hljs-keyword">if</span> u 没有打过访问标记 then<br>      DFS(u)<br>    end<br>  end<br>end<br><br></code></pre></td></tr></table></figure><p>参考：<a href="https://oi.wiki">OI.wiki</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;引入&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#引入&quot;&gt;&lt;/a&gt; 引入&lt;/h4&gt;
+&lt;p&gt;DFS全称是&lt;a href=&quot;https://en.wikipedia.org/wiki/Depth-first_search&quot;&gt;Depth F</summary>
+      
     
     
     
