@@ -26,7 +26,7 @@
 <meta property="og:description" content="arch wiki：https:&#x2F;&#x2F;wiki.archlinuxcn.org&#x2F;wiki&#x2F;安装指南 安装参考：https:&#x2F;&#x2F;blog.linioi.com&#x2F;posts&#x2F;18&#x2F; 连网参考：  https:&#x2F;&#x2F;blog.csdn.net&#x2F;bangren3304&#x2F;article&#x2F;details&#x2F;101078641 https:&#x2F;&#x2F;blog.csdn.net&#x2F;ZHISHAN_IoT&#x2F;article&#x2F;det">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-01-08T04:18:22.620Z">
-<meta property="article:modified_time" content="2023-05-07T09:50:58.553Z">
+<meta property="article:modified_time" content="2023-05-19T10:53:33.635Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -200,7 +200,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%90%9C%E7%B4%A2/">搜索</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">算法基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a><span class="category-list-count">10</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%90%9C%E7%B4%A2/">搜索</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">算法基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a><span class="category-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -305,7 +305,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a>
+                <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
               </p>
               <p class="item-title">
                 <a href="/2023/04/11/missing-semester/" class="title">missing-semester</a>
@@ -368,7 +368,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/01/08/%E4%BD%BF%E7%94%A8archlinux%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 250(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 275(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -392,6 +392,9 @@
 <p>安装deb包：首先安装用<code>yay -S debtap</code>安装debtap，然后升级debtap：<code>sudo debtap -u</code>，用<code>sudo debtap xxx.deb</code>解压，license填GPL，然后用<code>sudo pacman -U xxx.tar.xz</code>来安装软件</p>
 <p>使用xshell远程连接：先在manjaro启动ssh服务：<code>systemctl start sshd.service</code>，然后将其设置成开机自启<code>systemctl enable sshd.service</code>，现在就可以直接用xsehll通过ip连接，端口是22。会报错reject X11 forwarding request，这时修改<code>/etc/ssh/sshd_config</code>文件，将X11Forwarding no 改成 X11Forwarding yes，然后重启服务<code>systemctl restart sshd.service</code>即可</p>
 <p>linux配置vscode c++踩坑：manjaro系统没有gdb，找了半天，得先<code>yay -S gdb</code></p>
+<p>当yay -Syyu更新失败时，尝试以下方法：<br />
+编辑/etc/pacman.d/mirrorlist<br />
+编辑/etc/pacman.conf</p>
 
       
     </div>
