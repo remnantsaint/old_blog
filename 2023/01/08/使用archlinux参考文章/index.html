@@ -392,8 +392,8 @@
 <p>安装deb包：首先安装用<code>yay -S debtap</code>安装debtap，然后升级debtap：<code>sudo debtap -u</code>，用<code>sudo debtap xxx.deb</code>解压，license填GPL，然后用<code>sudo pacman -U xxx.tar.xz</code>来安装软件</p>
 <p>使用xshell远程连接：先在manjaro启动ssh服务：<code>systemctl start sshd.service</code>，然后将其设置成开机自启<code>systemctl enable sshd.service</code>，现在就可以直接用xsehll通过ip连接，端口是22。会报错reject X11 forwarding request，这时修改<code>/etc/ssh/sshd_config</code>文件，将X11Forwarding no 改成 X11Forwarding yes，然后重启服务<code>systemctl restart sshd.service</code>即可</p>
 <p>linux配置vscode c++踩坑：manjaro系统没有gdb，找了半天，得先<code>yay -S gdb</code></p>
-<p>当yay -Syyu更新失败时，尝试以下方法：<br>
-编辑/etc/pacman.d/mirrorlist<br>
+<p>当yay -Syyu更新失败时，尝试以下方法：<br />
+编辑/etc/pacman.d/mirrorlist<br />
 编辑/etc/pacman.conf</p>
 
       
