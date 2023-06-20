@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-20T13:44:46.796Z</updated>
+  <updated>2023-06-20T13:48:07.225Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,21 +21,20 @@
     <link href="http://example.com/2023/06/20/%E4%BA%91%E5%8C%BB%E9%99%A2%E9%A1%B9%E7%9B%AE/"/>
     <id>http://example.com/2023/06/20/%E4%BA%91%E5%8C%BB%E9%99%A2%E9%A1%B9%E7%9B%AE/</id>
     <published>2023-06-20T13:41:11.000Z</published>
-    <updated>2023-06-20T13:44:46.796Z</updated>
+    <updated>2023-06-20T13:48:07.225Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="Idea遇到的问题">Idea遇到的问题</h4><p>首先要了解怎么用tomcat运行项目文件，配置完tomcat别忘部署war exploded工件</p><p>servlet不知道为什么必须自己手写，善用补全，注意doGet类的方法要调用doPost（掉坑一次）</p><h4 id="nginx遇到的问题">nginx遇到的问题</h4><p>nginx不能看类似jsp的动态页面，只能看静态页面，所以和tomcat一起用。</p><p>多了解nginx的配置文件，了解反向代理和负载均衡。</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="idea开发java遇到的问题"><a class="markdownIt-Anchor" href="#idea开发java遇到的问题"></a> Idea开发Java遇到的问题</h4><p>首先要了解怎么用tomcat运行项目文件，配置完tomcat别忘部署war exploded工件</p><p>servlet不知道为什么必须自己手写，善用补全，注意doGet类的方法要调用doPost（掉坑一次）</p><h4 id="nginx遇到的问题"><a class="markdownIt-Anchor" href="#nginx遇到的问题"></a> nginx遇到的问题</h4><p>nginx不能看类似jsp的动态页面，只能看静态页面，所以和tomcat一起用。</p><p>多了解nginx的配置文件，了解反向代理和负载均衡。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h4 id=&quot;Idea遇到的问题&quot;&gt;Idea遇到的问题&lt;/h4&gt;
-&lt;p&gt;首先要了解怎么用tomcat运行项目文件，配置完tomcat别忘部署war exploded工件&lt;/p&gt;
-&lt;p&gt;servlet不知道为什么必须自己手写，善用补全，注意doGet类的方法要调用doPost（掉</summary>
+    <summary type="html">&lt;h4 id=&quot;idea开发java遇到的问题&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#idea开发java遇到的问题&quot;&gt;&lt;/a&gt; Idea开发Java遇到的问题&lt;/h4&gt;
+&lt;p&gt;首先要了解怎么用tomcat运行项目文件，配置完tomcat别忘部</summary>
       
     
     
     
-    <category term="课程" scheme="http://example.com/categories/%E8%AF%BE%E7%A8%8B/"/>
+    <category term="课程笔记" scheme="http://example.com/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
     
     
   </entry>
