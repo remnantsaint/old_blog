@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2023/06/20/%E4%BA%91%E5%8C%BB%E9%99%A2%E9%A1%B9%E7%9B%AE/</loc>
+    
+    <lastmod>2023-06-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/06/20/Github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2023-06-20</lastmod>
@@ -254,6 +263,15 @@
   </url>
   
   <url>
+    <loc>http://example.com/books/index.html</loc>
+    
+    <lastmod>2022-12-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/links/index.html</loc>
     
     <lastmod>2022-12-27</lastmod>
@@ -264,15 +282,6 @@
   
   <url>
     <loc>http://example.com/repository/index.html</loc>
-    
-    <lastmod>2022-12-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/books/index.html</loc>
     
     <lastmod>2022-12-27</lastmod>
     
@@ -329,14 +338,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%9B%BE%E8%AE%BA/</loc>
+    <loc>http://example.com/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2023-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>http://example.com/categories/%E5%9B%BE%E8%AE%BA/</loc>
     <lastmod>2023-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -358,6 +367,13 @@
   
   <url>
     <loc>http://example.com/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/%E8%AF%BE%E7%A8%8B/</loc>
     <lastmod>2023-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
