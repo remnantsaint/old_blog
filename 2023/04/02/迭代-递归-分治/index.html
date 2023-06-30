@@ -18,12 +18,12 @@
   
   
   <title>迭代&amp;递归&amp;分治 | Remsait</title>
-  <meta name="description" content="迭代1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。2.在代码中表现为在一个循环内，不断循环最终得到结果。 递归1.定义：递归在数学和计算机科学中指在函数的定义中使用函数自身的方法，还额外指一种通过重复将问题分解为同类子问题而解决问题的方法。基本思想是某个函数直接或间接地调用自身，在求解过程中只需关注如何把原问题划分成符合条件的子问题，不需要过分关注子问">
+  <meta name="description" content="迭代 1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。 2.在代码中表现为在一个循环内，不断循环最终得到结果。  递归 1.定义：递归在数学和计算机科学中指在函数的定义中使用函数自身的方法，还额外指一种通过重复将问题分解为同类子问题而解决问题的方法。基本思想是某个函数直接或间接地调用自身，在求解过程中只需关注如何把原问题划分成符合条件的子问题，不需要过">
 <meta property="og:type" content="article">
 <meta property="og:title" content="迭代&amp;递归&amp;分治">
 <meta property="og:url" content="http://example.com/2023/04/02/%E8%BF%AD%E4%BB%A3-%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="迭代1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。2.在代码中表现为在一个循环内，不断循环最终得到结果。 递归1.定义：递归在数学和计算机科学中指在函数的定义中使用函数自身的方法，还额外指一种通过重复将问题分解为同类子问题而解决问题的方法。基本思想是某个函数直接或间接地调用自身，在求解过程中只需关注如何把原问题划分成符合条件的子问题，不需要过分关注子问">
+<meta property="og:description" content="迭代 1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。 2.在代码中表现为在一个循环内，不断循环最终得到结果。  递归 1.定义：递归在数学和计算机科学中指在函数的定义中使用函数自身的方法，还额外指一种通过重复将问题分解为同类子问题而解决问题的方法。基本思想是某个函数直接或间接地调用自身，在求解过程中只需关注如何把原问题划分成符合条件的子问题，不需要过">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-02T12:02:43.000Z">
 <meta property="article:modified_time" content="2023-04-09T15:17:41.514Z">
@@ -334,7 +334,7 @@
         <h3 class="toc-title">
           文章目录
         </h3>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3"><span class="toc-text">迭代</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-text">递归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%B2%BB"><span class="toc-text">分治</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3"><span class="toc-text"> 迭代</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-text"> 递归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%B2%BB"><span class="toc-text"> 分治</span></a></li></ol>
       </nav>
     </div>
   </aside>
@@ -380,7 +380,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/04/02/%E8%BF%AD%E4%BB%A3-%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 682(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 681(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -390,18 +390,30 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h4 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h4><p>1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。<br>2.在代码中表现为在一个循环内，不断循环最终得到结果。</p>
-<h4 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h4><p>1.定义：递归在数学和计算机科学中指在函数的定义中使用函数自身的方法，还额外指一种通过重复将问题分解为同类子问题而解决问题的方法。基本思想是某个函数直接或间接地调用自身，在求解过程中只需关注如何把原问题划分成符合条件的子问题，不需要过分关注子问题如何解决。<br>2.特征：<strong>结束条件</strong>和<strong>自我调用</strong>，示例概括代码如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">func</span><span class="hljs-params">(传入数值)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span> (终止条件)<br>        <span class="hljs-keyword">return</span> 最小子问题解;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">func</span>(缩小规模);<br>&#125;<br></code></pre></td></tr></table></figure><br>3.缺点：在程序执行中，递归是利用堆栈实现的，每当进入一个函数调用，栈就会增加一层栈帧，每次函数返回，栈就会减少一层栈帧，递归层数过多会栈溢出。简单的递归不会消耗空间，比如给出链表头，计算长度的递归代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">size_recursion</span><span class="hljs-params">(Node *head)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">nullptr</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">size_recursion</span>(head-&gt;next) + <span class="hljs-number">1</span>;<span class="hljs-comment">//有一个结点加一次1</span><br>&#125;<br></code></pre></td></tr></table></figure></p>
-<h4 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h4><p>1.定义：把一个复杂问题分成多个相同或相似的子问题，直到最后子问题都可以直接求解，原问题即子问题的解的合并。分治问题能通过递归算法解决，也能通过非递归算法解决，通常用递归算法<br>2.过程：</p>
+        <h4 id="迭代"><a class="markdownIt-Anchor" href="#迭代"></a> 迭代</h4>
+<p>1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。<br />
+2.在代码中表现为在一个循环内，不断循环最终得到结果。</p>
+<h4 id="递归"><a class="markdownIt-Anchor" href="#递归"></a> 递归</h4>
+<p>1.定义：递归在数学和计算机科学中指在函数的定义中使用函数自身的方法，还额外指一种通过重复将问题分解为同类子问题而解决问题的方法。基本思想是某个函数直接或间接地调用自身，在求解过程中只需关注如何把原问题划分成符合条件的子问题，不需要过分关注子问题如何解决。<br />
+2.特征：<strong>结束条件</strong>和<strong>自我调用</strong>，示例概括代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">func</span><span class="hljs-params">(传入数值)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span> (终止条件)<br>        <span class="hljs-keyword">return</span> 最小子问题解;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">func</span>(缩小规模);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>3.缺点：在程序执行中，递归是利用堆栈实现的，每当进入一个函数调用，栈就会增加一层栈帧，每次函数返回，栈就会减少一层栈帧，递归层数过多会栈溢出。简单的递归不会消耗空间，比如给出链表头，计算长度的递归代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">size_recursion</span><span class="hljs-params">(Node *head)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">nullptr</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">size_recursion</span>(head-&gt;next) + <span class="hljs-number">1</span>;<span class="hljs-comment">//有一个结点加一次1</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="分治"><a class="markdownIt-Anchor" href="#分治"></a> 分治</h4>
+<p>1.定义：把一个复杂问题分成多个相同或相似的子问题，直到最后子问题都可以直接求解，原问题即子问题的解的合并。分治问题能通过递归算法解决，也能通过非递归算法解决，通常用递归算法<br />
+2.过程：</p>
 <ul>
 <li>分解原问题为结构相同的子问题</li>
 <li>分解到某个容易求解的边界之后，进行递归求解</li>
-<li>将子问题的解合并成原问题的解<br>3.能解决的问题特征：</li>
+<li>将子问题的解合并成原问题的解<br />
+3.能解决的问题特征：</li>
 <li>该问题的规模缩小到一定程度就可以容易地解决</li>
 <li>该问题可以分解为若干个规模较小的相同问题，即该问题具有最优子结构性质，利用该问题分解出的子问题的解可以合并成该问题的解</li>
-<li>该问题所分解出的各个子问题是<strong>相互独立</strong>的，即子问题之间不包含公共的子问题。(若子问题不相互独立，一般用动态规划)<br>4.分治与递归的区别：递归是一种变成技巧，一种解决问题的思维方式；分治算法很大程度上是基于递归的，解决更具体的算法思想。</li>
+<li>该问题所分解出的各个子问题是<strong>相互独立</strong>的，即子问题之间不包含公共的子问题。(若子问题不相互独立，一般用动态规划)<br />
+4.分治与递归的区别：递归是一种变成技巧，一种解决问题的思维方式；分治算法很大程度上是基于递归的，解决更具体的算法思想。</li>
 </ul>
-<p>参考：<br>&emsp; <a target="_blank" rel="noopener" href="https://oi.wiki">https://oi.wiki</a></p>
+<p>参考：<br />
+  <a target="_blank" rel="noopener" href="https://oi.wiki">https://oi.wiki</a></p>
 
       
     </div>
@@ -641,5 +653,20 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
       })
     </script>
   
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
