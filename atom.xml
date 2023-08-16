@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-28T08:56:39.290Z</updated>
+  <updated>2023-07-04T08:15:49.295Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,36 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>云医院项目</title>
-    <link href="http://example.com/2023/06/20/%E4%BA%91%E5%8C%BB%E9%99%A2%E9%A1%B9%E7%9B%AE/"/>
-    <id>http://example.com/2023/06/20/%E4%BA%91%E5%8C%BB%E9%99%A2%E9%A1%B9%E7%9B%AE/</id>
-    <published>2023-06-20T13:41:11.000Z</published>
-    <updated>2023-06-28T08:56:39.290Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="idea开发java遇到的问题"><a class="markdownIt-Anchor" href="#idea开发java遇到的问题"></a> Idea开发Java遇到的问题</h4><p>首先要了解怎么用tomcat运行项目文件，配置完tomcat别忘部署war exploded工件</p><p>servlet不知道为什么必须自己手写，善用补全，注意doGet类的方法要调用doPost（掉坑一次）</p><p>servlet中，直接补全的方法，注意doGet中用this.    初学servlet时，要注意不能将多个servlet放一个文件夹，不知道为什么会出现工件部署错误</p><p>servlet的@WebServlet()，括号内可以用/+表单的action来定向</p><h4 id="nginx遇到的问题"><a class="markdownIt-Anchor" href="#nginx遇到的问题"></a> nginx遇到的问题</h4><p>nginx不能看类似jsp的动态页面，只能看静态页面，所以和tomcat一起用。</p><p>多了解nginx的配置文件，了解反向代理和负载均衡。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;idea开发java遇到的问题&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#idea开发java遇到的问题&quot;&gt;&lt;/a&gt; Idea开发Java遇到的问题&lt;/h4&gt;
-&lt;p&gt;首先要了解怎么用tomcat运行项目文件，配置完tomcat别忘部</summary>
-      
-    
-    
-    
-    <category term="课程笔记" scheme="http://example.com/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Github使用指南</title>
     <link href="http://example.com/2023/06/20/Github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>http://example.com/2023/06/20/Github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2023-06-19T23:51:51.000Z</published>
-    <updated>2023-06-30T02:46:19.755Z</updated>
+    <updated>2023-07-04T08:15:49.295Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="创建github账号记住github用户名-邮箱-密码略"><a class="markdownIt-Anchor" href="#创建github账号记住github用户名-邮箱-密码略"></a> 创建Github账号，记住Github用户名、邮箱、密码（略）</h4><h4 id="下载安装git略"><a class="markdownIt-Anchor" href="#下载安装git略"></a> 下载安装Git（略）</h4><h4 id="配置git"><a class="markdownIt-Anchor" href="#配置git"></a> 配置Git</h4><p>打开git bash（可以在开始界面找到，或者在文件夹空白处右键选择打开git bash），接下来的命令都在git bash内完成</p><p>连接Github：<br /><code>git config --global user.name &quot;你的Github用户名&quot;</code><br /><code>git config --global user.email &quot;你的Github邮箱&quot;</code></p><p>创建密匙，来让本机能绑定访问Github，能在你的Github上传文件：<br /><code>ssh-keygen -t rsa -C &quot;你的Github邮箱&quot;</code></p><p>添加密匙：<br />在Github网页端，头像——&gt;Settings——&gt;SSH and GPG keys——&gt;New SSH key<br />Title随便写，Key处要找到你刚才创建的密匙文件，一般在：C盘——&gt;用户——&gt;用户名——&gt;.ssh文件夹，打开id_rsa.pub文件，将内容复制到Key处</p><p>验证连接：`ssh -T <a href="mailto:git@github.com">git@github.com</a>&quot;</p><h4 id="使用git"><a class="markdownIt-Anchor" href="#使用git"></a> 使用Git</h4><p>参考链接：<a href="https://www.remsait.com/2023/04/18/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Git基础教程 | Remsait</a></p><h4 id="github网页端的使用"><a class="markdownIt-Anchor" href="#github网页端的使用"></a> Github网页端的使用</h4><p>（1）在别人的项目处，右上角找到fork，就能克隆一个他人的仓库到自己的仓库<br />（2）在本地的dev分支用git提交完修改后，能看到自己网页端的dev分支已经变化，一般会弹出一个绿色的合并按钮，点击然后检查后就能合并到主分支<br />（3）将自己fork后的参仓库的修改提交，申请主仓库合并</p><h4 id="20236-用github和自己的域名创建多个网站"><a class="markdownIt-Anchor" href="#20236-用github和自己的域名创建多个网站"></a> 2023.6 用Github和自己的域名创建多个网站</h4><p>仅记录我的做法：<br />我的域名在腾讯云解析，添加一个主机记录为acg，记录类型为A</p><p>在Github上创建一个仓库，进入仓库设置，点击Pages，将Branch设置为main分支，将Custom domain设置为新的域名，例如我的<code>acg.remsait.com</code></p><p>然后等待一会，浏览器输入<code>acg.remsait.com</code>就能显示index.html指向的网页了。</p><h4 id="同步提交gitee和github仓库"><a class="markdownIt-Anchor" href="#同步提交gitee和github仓库"></a> 同步提交gitee和github仓库</h4><p>首先保证两个平台都有本地电脑的公钥，在.git文件夹的config文件的remote中添加url指向新的仓库，然后暴力推送一次同步<code>\^o^/</code></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="创建github账号记住github用户名-邮箱-密码略"><a class="markdownIt-Anchor" href="#创建github账号记住github用户名-邮箱-密码略"></a> 创建Github账号，记住Github用户名、邮箱、密码（略）</h4><h4 id="下载安装git略"><a class="markdownIt-Anchor" href="#下载安装git略"></a> 下载安装Git（略）</h4><h4 id="配置git"><a class="markdownIt-Anchor" href="#配置git"></a> 配置Git</h4><p>打开git bash（可以在开始界面找到，或者在文件夹空白处右键选择打开git bash），接下来的命令都在git bash内完成</p><p>连接Github：<br /><code>git config --global user.name &quot;你的Github用户名&quot;</code><br /><code>git config --global user.email &quot;你的Github邮箱&quot;</code></p><p>创建密匙，来让本机能绑定访问Github，能在你的Github上传文件：<br /><code>ssh-keygen -t rsa -C &quot;你的Github邮箱&quot;</code></p><p>添加公钥：<br />在Github网页端，头像——&gt;Settings——&gt;SSH and GPG keys——&gt;New SSH key<br />Title随便写，Key处要找到你刚才创建的密匙文件，一般在：C盘——&gt;用户——&gt;用户名——&gt;.ssh文件夹，打开id_rsa.pub文件，将内容复制到Key处</p><p>验证连接：`ssh -T <a href="mailto:git@github.com">git@github.com</a>&quot;</p><h4 id="使用git"><a class="markdownIt-Anchor" href="#使用git"></a> 使用Git</h4><p>参考链接：<a href="https://www.remsait.com/2023/04/18/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Git基础教程 | Remsait</a></p><h4 id="github网页端的使用"><a class="markdownIt-Anchor" href="#github网页端的使用"></a> Github网页端的使用</h4><p>（1）在别人的项目处，右上角找到fork，就能克隆一个他人的仓库到自己的仓库<br />（2）在本地的dev分支用git提交完修改后，能看到自己网页端的dev分支已经变化，一般会弹出一个绿色的合并按钮，点击然后检查后就能合并到主分支<br />（3）将自己fork后的参仓库的修改提交，申请主仓库合并</p><h4 id="20236-用github和自己的域名创建多个网站"><a class="markdownIt-Anchor" href="#20236-用github和自己的域名创建多个网站"></a> 2023.6 用Github和自己的域名创建多个网站</h4><p>仅记录我的做法：<br />我的域名在腾讯云解析，添加一个主机记录为acg，记录类型为A</p><p>在Github上创建一个仓库，进入仓库设置，点击Pages，将Branch设置为main分支，将Custom domain设置为新的域名，例如我的<code>acg.remsait.com</code></p><p>然后等待一会，浏览器输入<code>acg.remsait.com</code>就能显示index.html指向的网页了。</p><h4 id="同步提交gitee和github仓库"><a class="markdownIt-Anchor" href="#同步提交gitee和github仓库"></a> 同步提交gitee和github仓库</h4><p>首先保证两个平台都有本地电脑的公钥，在.git文件夹的config文件的remote中添加url指向新的仓库，然后暴力推送一次同步<code>\^o^/</code></p>]]></content>
     
     
       
@@ -503,6 +480,30 @@
     
     
     <category term="链表" scheme="http://example.com/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些tips</title>
+    <link href="http://example.com/2023/03/29/%E4%B8%80%E4%BA%9BTip/"/>
+    <id>http://example.com/2023/03/29/%E4%B8%80%E4%BA%9BTip/</id>
+    <published>2023-03-29T13:41:37.000Z</published>
+    <updated>2023-04-09T15:17:14.904Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误<br />2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少<br />3.力扣上说的头结点意思是首元结点，带有数据域，若要删除首元结点，就需要定义一个虚拟头节点dummynode，别忘了分配空间。（翻译问题？）<br />4.如果从头结点开始遍历，一般让p-&gt;next!=NULL；从首元结点开始遍历就让p!=NULL</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1.定义比较大的数组的时候（例如1e5），要放在全局变量，否则ide会提示段错误&lt;br /&gt;
+2.ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);清除内存，超内存超时时用，大数据集快不少&lt;br /&gt;
+3.力扣上说的</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
     
   </entry>
   
