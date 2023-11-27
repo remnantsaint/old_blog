@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://example.com/2023/03/24/%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2023-11-27</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2023/05/02/linux%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2023-11-01</lastmod>
   </url>
@@ -54,10 +58,6 @@
   </url>
   <url>
     <loc>http://example.com/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/</loc>
-    <lastmod>2023-04-09</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2023/03/24/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2023-04-09</lastmod>
   </url>
   <url>
