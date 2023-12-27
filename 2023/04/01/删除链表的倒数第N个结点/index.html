@@ -388,8 +388,8 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><img src="https://cdn.jsdelivr.net/gh/remnantsaint/hexoImage@main/20230401072816.png" alt=""><br>
-用一趟扫描实现：<br>
+        <p><img src="https://cdn.jsdelivr.net/gh/remnantsaint/hexoImage@main/20230401072816.png" alt="" /><br />
+用一趟扫描实现：<br />
 题解：本题是力扣上的题，注意力扣上说的头结点是指首元结点，带有数据域，那么就需要设置一个虚拟头结点来指向首元结点，用双指针遍历，first遍历到结尾时与second正好相差n个元素</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * struct ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode *next;</span><br><span class="hljs-comment"> * &#125;;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">removeNthFromEnd</span><span class="hljs-params">(ListNode* head, <span class="hljs-type">int</span> n)</span> </span>&#123;<br><br>    ListNode *dummyhead=<span class="hljs-keyword">new</span> <span class="hljs-built_in">ListNode</span>();<span class="hljs-comment">//设置虚拟头节点</span><br>    dummyhead-&gt;next=head;<br><br>    ListNode *first,*second;<br>    first=second=dummyhead;<br>    <span class="hljs-keyword">while</span>(n--)&#123;<br>        first=first-&gt;next;<span class="hljs-comment">//双指针相差n个，</span><br>    &#125;<br>    <span class="hljs-comment">//此时first与second相差n个，但是当first到结尾时second-&gt;next才是要删除的</span><br>    <span class="hljs-keyword">while</span>(first-&gt;next!=<span class="hljs-literal">NULL</span>)&#123;<span class="hljs-comment">//遍历到结尾</span><br>        first=first-&gt;next;<br>        second=second-&gt;next;<br>    &#125;<br>    second-&gt;next=second-&gt;next-&gt;next;<span class="hljs-comment">//删除second-&gt;next</span><br>    <span class="hljs-keyword">return</span> dummyhead-&gt;next;<span class="hljs-comment">//返回dummyhead-&gt;next，因为有可能首元结点被删去，需要用虚拟头结点</span><br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/?utm_source=LCUS&amp;utm_medium=ip_redirect&amp;utm_campaign=transfer2china&amp;orderBy=most_votes">题目链接</a></p>
@@ -496,7 +496,7 @@
         </div>
     </div> -->
         <div class="copyright"><a href="https://icp.gov.moe/?keyword=20231227" target="_blank">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;萌ICP备20231227号</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;萌ICP备20231227号</a>
         </div>
         <script src="js/prism/prism.js" async></script>
 </footer>
