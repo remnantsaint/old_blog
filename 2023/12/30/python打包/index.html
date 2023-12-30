@@ -17,16 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2023/4 | Remsait</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/04/index.html">
+  <title>python打包 | Remsait</title>
+  <meta name="description" content="将一个python程序转为应用不难，只需要用工具就可以 1.配置python环境变量 2.使用pip安装pyinstaller  pip install pyinstaller 3.在项目的根目录下，运行 pyinstaller --onefile --noconsole main.py 4.在生成的disk文件夹中，就可以找到可运行的.exe文件 5.不使用--onefile参数，就会生成一个文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python打包">
+<meta property="og:url" content="http://example.com/2023/12/30/python%E6%89%93%E5%8C%85/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="将一个python程序转为应用不难，只需要用工具就可以 1.配置python环境变量 2.使用pip安装pyinstaller  pip install pyinstaller 3.在项目的根目录下，运行 pyinstaller --onefile --noconsole main.py 4.在生成的disk文件夹中，就可以找到可运行的.exe文件 5.不使用--onefile参数，就会生成一个文">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-30T09:51:32.000Z">
+<meta property="article:modified_time" content="2023-12-30T09:53:28.813Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/archives/2023/04/index.html">
+  <link rel="canonical" href="http://example.com/2023/12/30/python%E6%89%93%E5%8C%85/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -323,165 +327,156 @@
 
   
   
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope
+    itemtype="http://schema.org/WPSideBar">
+    <div class="slimContent">
+      <nav id="toc" class="article-toc">
+        <h3 class="toc-title">
+          文章目录
+        </h3>
+        
+      </nav>
+    </div>
+  </aside>
+  
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2023/4</h1>
-	      <p class="text-muted">共 27 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-  
+  <div class="content">
+  <article id="post-python打包" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python打包
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2023" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2023
-            </a>
-            <!-- <a href="/archives/2023" class="archive-year">2023</a> -->
-          </h3>
-        </div>
-        <div id="collapse2023" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2023">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2023/04/18/git%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-18T11:12:39.000Z" itemprop="datePublished">2023-04-18</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Git基础教程
-</a>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2023/12/30/python%E6%89%93%E5%8C%85/" class="article-date">
+	  <time datetime="2023-12-30T09:51:32.000Z" itemprop="datePublished">2023-12-30</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a>
+  </span>
+
+        
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
 
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/12/30/python%E6%89%93%E5%8C%85/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 114(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>将一个python程序转为应用不难，只需要用工具就可以<br />
+1.配置python环境变量<br />
+2.使用pip安装pyinstaller  <code>pip install pyinstaller</code><br />
+3.在项目的根目录下，运行 <code>pyinstaller --onefile --noconsole main.py</code><br />
+4.在生成的disk文件夹中，就可以找到可运行的.exe文件<br />
+5.不使用<code>--onefile</code>参数，就会生成一个文件夹，不使用<code>--noconsole</code>参数，就会在打开.exe文件时出现命令行程序</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <!--<blockquote class="mt-2x">
+   <ul class="post-copyright list-unstyled">
+    
+   <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2023/12/30/python%E6%89%93%E5%8C%85/" title="python打包" target="_blank" rel="external">http://example.com/2023/12/30/python打包/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>  
+  </ul>   
+</blockquote>  -->
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/remnantsaint" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/remnantsaint" target="_blank"><span class="text-dark">Remsait</span><small class="ml-1x"></small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
-    
-    
-<a href="/2023/04/11/missing-semester/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-11T14:39:53.000Z" itemprop="datePublished">2023-04-11</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> missing-semester
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/11/DFS-%E6%90%9C%E7%B4%A2/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-11T04:22:11.000Z" itemprop="datePublished">2023-04-11</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> DFS(搜索)
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/10/LRU%E7%BC%93%E5%AD%98/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-10T11:37:40.000Z" itemprop="datePublished">2023-04-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> LRU缓存
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/08/%E9%93%BE%E8%A1%A8%E6%8E%92%E5%BA%8F/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-08T13:47:58.000Z" itemprop="datePublished">2023-04-08</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 链表排序
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/08/Vim%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-08T09:35:07.000Z" itemprop="datePublished">2023-04-08</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Vim简单应用
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/07/%E6%89%BE%E5%87%BA%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E7%9A%84%E5%85%A5%E7%8E%AF%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-07T13:57:04.000Z" itemprop="datePublished">2023-04-07</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 找出环形链表的入环第一个结点
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/05/%E5%AF%B9%E9%93%BE%E8%A1%A8%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-05T14:16:17.000Z" itemprop="datePublished">2023-04-05</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 对链表插入排序
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/04/%E5%90%88%E5%B9%B6%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-04T13:42:25.000Z" itemprop="datePublished">2023-04-04</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 合并有序链表
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/04/03/%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/" class="collection-item"   itemprop="url">
-  <time datetime="2023-04-03T10:14:24.000Z" itemprop="datePublished">2023-04-03</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 重排链表
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
+  <section id="comments">
   	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
     
-    <nav class="bar bar-footer clearfix" data-stick-bottom>
-        <div class="bar-inner">
-        <ul class="pager pull-left">
-            
-            <li class="prev disabled">
-                <a href="javascript:;">
-                    <i class="icon icon-angle-left"></i>
-                    上一页
-                </a>
-            </li>
-            
-            
-            <li class="next">
-                <a href="/archives/2023/04/page/2/">
-                    下一页
-                    <i class="icon icon-angle-right"></i>
-                </a>
-            </li>
-            
-        </ul>
-            <div class="total-article bar-right">Page 1 of 2</div>
-        </div>
-    </nav>
     
- 	
+    <li class="next">
+      <a href="/2023/12/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="" data-mobile-sites=""></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -547,6 +542,14 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
 
 
 

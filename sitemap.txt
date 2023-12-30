@@ -1,4 +1,5 @@
 http://example.com/2023/12/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/
+http://example.com/2023/12/30/python%E6%89%93%E5%8C%85/
 http://example.com/2023/04/10/LRU%E7%BC%93%E5%AD%98/
 http://example.com/2023/06/20/Github%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/
 http://example.com/2023/04/11/missing-semester/
@@ -37,8 +38,9 @@ http://example.com/tags/%E5%93%88%E5%B8%8C/
 http://example.com/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/
 http://example.com/categories/%E6%90%9C%E7%B4%A2/
 http://example.com/categories/%E5%9B%BE%E8%AE%BA/
-http://example.com/categories/%E9%A2%98%E8%A7%A3/
 http://example.com/categories/%E5%85%B6%E4%BB%96/
+http://example.com/categories/%E9%A2%98%E8%A7%A3/
 http://example.com/categories/Linux/
+http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/
 http://example.com/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/
 http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
