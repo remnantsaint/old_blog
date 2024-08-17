@@ -18,12 +18,12 @@
   
   
   <title>DFS（图论） | Remsait</title>
-  <meta name="description" content="引入 DFS全称是Depth First Search，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法。深度优先就是每次都尝试向更深的节点走。 该算法和常与BFS并列，但两者除了都能遍历图的连通块意外，用途完全不同，很少能混用两种算法 DFS常常用来代指用递归函数实现的搜索，但实际上两者并不一样，有关参考DFS(搜索) 过程 DFS 最显著的特征在于其递归调用自身。同时与BFS类似，DFS">
+  <meta name="description" content="引入 DFS全称是Depth First Search，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法。深度优先就是每次都尝试向更深的节点走。 该算法和常与BFS并列，但两者除了都能遍历图的连通块意外，用途完全不同，很少能混用两种算法 DFS常常用来代指用递归函数实现的搜索，但实际上两者并不一样，有关参考DFS(搜索)  过程 DFS 最显著的特征在于其递归调用自身。同时与BFS类似，D">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DFS（图论）">
 <meta property="og:url" content="http://example.com/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="引入 DFS全称是Depth First Search，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法。深度优先就是每次都尝试向更深的节点走。 该算法和常与BFS并列，但两者除了都能遍历图的连通块意外，用途完全不同，很少能混用两种算法 DFS常常用来代指用递归函数实现的搜索，但实际上两者并不一样，有关参考DFS(搜索) 过程 DFS 最显著的特征在于其递归调用自身。同时与BFS类似，DFS">
+<meta property="og:description" content="引入 DFS全称是Depth First Search，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法。深度优先就是每次都尝试向更深的节点走。 该算法和常与BFS并列，但两者除了都能遍历图的连通块意外，用途完全不同，很少能混用两种算法 DFS常常用来代指用递归函数实现的搜索，但实际上两者并不一样，有关参考DFS(搜索)  过程 DFS 最显著的特征在于其递归调用自身。同时与BFS类似，D">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-09T14:19:58.000Z">
 <meta property="article:modified_time" content="2023-05-19T10:52:14.927Z">
@@ -231,7 +231,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -243,21 +243,6 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2024/03/26/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%8D%E8%AF%95%E5%A4%A7%E7%BA%B2/" class="title">数据库复试大纲</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2024-03-26T08:14:27.000Z" itemprop="datePublished">2024-03-26</time>
-              </p>
-            </div>
-          </li>
-          
           <li>
             
             <div class="item-inner">
@@ -318,6 +303,21 @@
             </div>
           </li>
           
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/05/07/%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" class="title">图的存储</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-07T09:25:32.000Z" itemprop="datePublished">2023-05-07</time>
+              </p>
+            </div>
+          </li>
+          
       </ul>
     </div>
   </div>
@@ -336,7 +336,7 @@
         <h3 class="toc-title">
           文章目录
         </h3>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-text">引入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-text">过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text">性质</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-text"> 引入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-text"> 过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text"> 性质</span></a></li></ol>
       </nav>
     </div>
   </aside>
@@ -382,7 +382,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/05/09/DFS%EF%BC%88%E5%9B%BE%E8%AE%BA%EF%BC%89/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 352(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 362(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -392,16 +392,16 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h4 id="引入">引入</h4>
+        <h4 id="引入"><a class="markdownIt-Anchor" href="#引入"></a> 引入</h4>
 <p>DFS全称是<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Depth-first_search">Depth First Search</a>，中文名是深度优先搜索，是一种用于遍历或搜索树或图的算法。深度优先就是每次都尝试向更深的节点走。</p>
 <p>该算法和常与BFS并列，但两者除了都能遍历图的连通块意外，用途完全不同，很少能混用两种算法</p>
 <p>DFS常常用来代指用递归函数实现的搜索，但实际上两者并不一样，有关参考<a target="_blank" rel="noopener" href="https://www.remsait.com/2023/04/11/DFS-%E6%90%9C%E7%B4%A2/">DFS(搜索)</a></p>
-<h4 id="过程">过程</h4>
+<h4 id="过程"><a class="markdownIt-Anchor" href="#过程"></a> 过程</h4>
 <p>DFS 最显著的特征在于其<strong>递归调用自身</strong>。同时与BFS类似，DFS会对其访问过的点打上标记，在遍历图时跳过已打标记的点，以确保<strong>每个点仅访问一次</strong>，符合以上两点便是广义上的DFS</p>
 <p>具体地说，DFS大致结构如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">//只包含DFS必须的主要结构，实际的DFS会在以上代码基础上加入一些代码，利用DFS性质进行其它操作<br>DFS(v) // v 可以是图中的一个顶点，也可以是抽象的概念，如 dp 状态等。<br>  在 v 上打访问标记<br>  <span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> v 的相邻节点<br>    <span class="hljs-keyword">if</span> u 没有打过访问标记 then<br>      DFS(u)<br>    end<br>  end<br>end<br><br></code></pre></td></tr></table></figure>
-<h4 id="性质">性质</h4>
-<p>该算法通常的时间复杂度为$O(n+m)$，空间复杂度为$O(n)$，其中$n$表示点数，$m$表示边数。</p>
+<h4 id="性质"><a class="markdownIt-Anchor" href="#性质"></a> 性质</h4>
+<p>该算法通常的时间复杂度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n+m)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span></span></span></span>，空间复杂度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，其中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>表示点数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>表示边数。</p>
 <p>参考：<a target="_blank" rel="noopener" href="https://oi.wiki">OI.wiki</a></p>
 
       
