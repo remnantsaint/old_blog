@@ -18,12 +18,12 @@
   
   
   <title>KNN近邻 | Remsait</title>
-  <meta name="description" content="KNN算法原理  一句话总结：“近朱者赤近墨者黑” KNN是一个简单的无显示学习过程，非泛化学习的监督学习模型。在分类和回归中均有应用。 先给出已知的数据集，计算未知数据与每个已知数据集的距离（欧氏距离），取前K个数据（K一般小于等于20） 在这K个数据中，多数属于某个类，就把该输入实例分为这个类   KNN开发流程  收集数据：任何方法 准备数据：距离计算所需要的数值，最好是结构化的数据格式">
+  <meta name="description" content="KNN算法原理 一句话总结：“近朱者赤近墨者黑” KNN是一个简单的无显示学习过程，非泛化学习的监督学习模型。在分类和回归中均有应用。 先给出已知的数据集，计算未知数据与每个已知数据集的距离（欧氏距离），取前K个数据（K一般小于等于20） 在这K个数据中，多数属于某个类，就把该输入实例分为这个类  KNN开发流程 收集数据：任何方法 准备数据：距离计算所需要的数值，最好是结构化的数据格式 分析数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="KNN近邻">
 <meta property="og:url" content="http://example.com/2024/09/06/KNN%E8%BF%91%E9%82%BB/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="KNN算法原理  一句话总结：“近朱者赤近墨者黑” KNN是一个简单的无显示学习过程，非泛化学习的监督学习模型。在分类和回归中均有应用。 先给出已知的数据集，计算未知数据与每个已知数据集的距离（欧氏距离），取前K个数据（K一般小于等于20） 在这K个数据中，多数属于某个类，就把该输入实例分为这个类   KNN开发流程  收集数据：任何方法 准备数据：距离计算所需要的数值，最好是结构化的数据格式">
+<meta property="og:description" content="KNN算法原理 一句话总结：“近朱者赤近墨者黑” KNN是一个简单的无显示学习过程，非泛化学习的监督学习模型。在分类和回归中均有应用。 先给出已知的数据集，计算未知数据与每个已知数据集的距离（欧氏距离），取前K个数据（K一般小于等于20） 在这K个数据中，多数属于某个类，就把该输入实例分为这个类  KNN开发流程 收集数据：任何方法 准备数据：距离计算所需要的数值，最好是结构化的数据格式 分析数据">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-06T01:33:39.000Z">
 <meta property="article:modified_time" content="2024-09-06T01:42:01.652Z">
@@ -335,7 +335,7 @@
         <h3 class="toc-title">
           文章目录
         </h3>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#knn%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-text"> KNN算法原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#knn%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-text"> KNN开发流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#knn%E7%AE%97%E6%B3%95%E7%89%B9%E7%82%B9"><span class="toc-text"> KNN算法特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#knn%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-text"> KNN三要素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#knn%E7%AE%97%E6%B3%95%E4%BC%AA%E4%BB%A3%E7%A0%81"><span class="toc-text"> KNN算法伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5httpsgithubcomremnantsaintailearningblobmasterdocsml2md"><span class="toc-text"> 参考链接：https:&#x2F;&#x2F;github.com&#x2F;remnantsaint&#x2F;ailearning&#x2F;blob&#x2F;master&#x2F;docs&#x2F;ml&#x2F;2.md</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#KNN%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86"><span class="toc-text">KNN算法原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KNN%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-text">KNN开发流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KNN%E7%AE%97%E6%B3%95%E7%89%B9%E7%82%B9"><span class="toc-text">KNN算法特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KNN%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-text">KNN三要素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KNN%E7%AE%97%E6%B3%95%E4%BC%AA%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-text">KNN算法伪代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps-github-com-remnantsaint-ailearning-blob-master-docs-ml-2-md"><span class="toc-text">参考链接：https:&#x2F;&#x2F;github.com&#x2F;remnantsaint&#x2F;ailearning&#x2F;blob&#x2F;master&#x2F;docs&#x2F;ml&#x2F;2.md</span></a></li></ol>
       </nav>
     </div>
   </aside>
@@ -386,7 +386,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/09/06/KNN%E8%BF%91%E9%82%BB/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 705(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 723(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -396,15 +396,13 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h4 id="knn算法原理"><a class="markdownIt-Anchor" href="#knn算法原理"></a> KNN算法原理</h4>
-<ol>
+        <h4 id="KNN算法原理"><a href="#KNN算法原理" class="headerlink" title="KNN算法原理"></a>KNN算法原理</h4><ol>
 <li>一句话总结：“近朱者赤近墨者黑”</li>
 <li>KNN是一个简单的无显示学习过程，非泛化学习的监督学习模型。在分类和回归中均有应用。</li>
 <li>先给出已知的数据集，计算未知数据与每个已知数据集的<code>距离</code>（欧氏距离），取前<code>K</code>个数据（K一般小于等于20）</li>
 <li>在这K个数据中，多数属于某个类，就把该输入实例分为这个类</li>
 </ol>
-<h4 id="knn开发流程"><a class="markdownIt-Anchor" href="#knn开发流程"></a> KNN开发流程</h4>
-<ol>
+<h4 id="KNN开发流程"><a href="#KNN开发流程" class="headerlink" title="KNN开发流程"></a>KNN开发流程</h4><ol>
 <li>收集数据：任何方法</li>
 <li>准备数据：距离计算所需要的数值，最好是结构化的数据格式</li>
 <li>分析数据：任何方法</li>
@@ -412,32 +410,19 @@
 <li>测试算法：计算错误率</li>
 <li>使用算法：输入样本数据和结构化的输出结果，然后运行k-近邻算法判断输入数据分类属于哪个分类，最后计算出分类执行后续处理</li>
 </ol>
-<h4 id="knn算法特点"><a class="markdownIt-Anchor" href="#knn算法特点"></a> KNN算法特点</h4>
-<ol>
+<h4 id="KNN算法特点"><a href="#KNN算法特点" class="headerlink" title="KNN算法特点"></a>KNN算法特点</h4><ol>
 <li>优点：精度高、对异常值不敏感、无数据输入假定</li>
 <li>缺点：计算复杂度高、空间复杂度高</li>
 <li>适用数据范围：数值型和标称型</li>
 </ol>
-<h4 id="knn三要素"><a class="markdownIt-Anchor" href="#knn三要素"></a> KNN三要素</h4>
-<ol>
-<li>K的取值<br />
-  K取值过小：近似误差小，估计误差大，容易过拟合，预测出错<br />
-  K取值过大：近似误差大，估计误差小，模型变简单，预测容易错误</li>
-<li>距离度量<br />
-  距离度量通常是欧氏距离，也可以是曼哈顿距离或者Minkowski距离，也可以是地理空间中的一些距离公式。</li>
-<li>分类决策：<br />
-  分类决策在分类问题中通常为少数服从多数，选取票数最多的标签，在回归问题中通常为K个最邻点的标签的平均值</li>
+<h4 id="KNN三要素"><a href="#KNN三要素" class="headerlink" title="KNN三要素"></a>KNN三要素</h4><ol>
+<li>K的取值<br>&emsp;&emsp;K取值过小：近似误差小，估计误差大，容易过拟合，预测出错<br>&emsp;&emsp;K取值过大：近似误差大，估计误差小，模型变简单，预测容易错误</li>
+<li>距离度量<br>&emsp;&emsp;距离度量通常是欧氏距离，也可以是曼哈顿距离或者Minkowski距离，也可以是地理空间中的一些距离公式。</li>
+<li>分类决策：<br>&emsp;&emsp;分类决策在分类问题中通常为少数服从多数，选取票数最多的标签，在回归问题中通常为K个最邻点的标签的平均值</li>
 </ol>
-<h4 id="knn算法伪代码"><a class="markdownIt-Anchor" href="#knn算法伪代码"></a> KNN算法伪代码：</h4>
-<p>对于每一个在数据集中的数据点:<br />
-  计算目标的数据点（需要分类的数据点）与该数据点的距离<br />
-  将距离排序: 从小到大<br />
-  选取前K个最短距离<br />
-  选取这K个中最多的分类类别<br />
-  返回该类别来作为目标数据点的预测值</p>
+<h4 id="KNN算法伪代码："><a href="#KNN算法伪代码：" class="headerlink" title="KNN算法伪代码："></a>KNN算法伪代码：</h4><p>对于每一个在数据集中的数据点:<br>&emsp;&emsp;计算目标的数据点（需要分类的数据点）与该数据点的距离<br>&emsp;&emsp;将距离排序: 从小到大<br>&emsp;&emsp;选取前K个最短距离<br>&emsp;&emsp;选取这K个中最多的分类类别<br>&emsp;&emsp;返回该类别来作为目标数据点的预测值       </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">classify0</span>(<span class="hljs-params">inX, dataSet, labels, k</span>):<br>    dataSetSize = dataSet.shape[<span class="hljs-number">0</span>]<br>    <span class="hljs-comment">#距离度量 度量公式为欧氏距离</span><br>    diffMat = tile(inX, (dataSetSize,<span class="hljs-number">1</span>)) – dataSet<br>    sqDiffMat = diffMat**<span class="hljs-number">2</span><br>    sqDistances = sqDiffMat.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>)<br>    distances = sqDistances**<span class="hljs-number">0.5</span><br>    <br>    <span class="hljs-comment">#将距离排序: 从小到大</span><br>    sortedDistIndicies = distances.argsort()<br>    <span class="hljs-comment">#选取前K个最短距离， 选取这K个中最多的分类类别</span><br>    classCount=&#123;&#125;<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k): <br>        voteIlabel = labels[sortedDistIndicies[i]]<br>        classCount[voteIlabel] = classCount.get(voteIlabel,<span class="hljs-number">0</span>) + <span class="hljs-number">1</span> <br>    sortedClassCount = <span class="hljs-built_in">sorted</span>(classCount.iteritems(), key=operator.itemgetter(<span class="hljs-number">1</span>), reverse=<span class="hljs-literal">True</span>)<br>    <span class="hljs-keyword">return</span> sortedClassCount[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure>
-<h4 id="参考链接httpsgithubcomremnantsaintailearningblobmasterdocsml2md"><a class="markdownIt-Anchor" href="#参考链接httpsgithubcomremnantsaintailearningblobmasterdocsml2md"></a> 参考链接：<a target="_blank" rel="noopener" href="https://github.com/remnantsaint/ailearning/blob/master/docs/ml/2.md">https://github.com/remnantsaint/ailearning/blob/master/docs/ml/2.md</a></h4>
-
+<h4 id="参考链接：https-github-com-remnantsaint-ailearning-blob-master-docs-ml-2-md"><a href="#参考链接：https-github-com-remnantsaint-ailearning-blob-master-docs-ml-2-md" class="headerlink" title="参考链接：https://github.com/remnantsaint/ailearning/blob/master/docs/ml/2.md"></a>参考链接：<a target="_blank" rel="noopener" href="https://github.com/remnantsaint/ailearning/blob/master/docs/ml/2.md">https://github.com/remnantsaint/ailearning/blob/master/docs/ml/2.md</a></h4>
       
     </div>
     <div class="article-footer">
