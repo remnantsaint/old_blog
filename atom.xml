@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-30T09:53:28.813Z</updated>
+  <updated>2024-09-06T01:41:57.313Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>生信linux</title>
+    <link href="http://example.com/2024/09/06/%E7%94%9F%E4%BF%A1linux/"/>
+    <id>http://example.com/2024/09/06/%E7%94%9F%E4%BF%A1linux/</id>
+    <published>2024-09-06T01:34:31.000Z</published>
+    <updated>2024-09-06T01:41:57.313Z</updated>
+    
+    <content type="html"><![CDATA[<p>刚开学，我想尝试一下用ubuntu来学习生信方面的知识，安装完ubuntu20.04版本后，要用xshell连接，但是ubuntu有点特别，需要开启open-ssh服务，用以下命令<code>sudo apt-get install openssh-serve</code>，先用命令<code>ifconfig</code>看一下ip地址(主机) 然后就可以用xshell来连接了.</p><p>下载Anaconda时注意到需要下载x86架构的软件</p><p>安装.sh文件方法：sudo sh *.sh</p><p>经过思考，决定不用ubuntu了     （悲</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;刚开学，我想尝试一下用ubuntu来学习生信方面的知识，安装完ubuntu20.04版本后，要用xshell连接，但是ubuntu有点特别，需要开启open-ssh服务，用以下命令&lt;code&gt;sudo apt-get install openssh-serve&lt;/code&gt;</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>决策树</title>
+    <link href="http://example.com/2024/09/06/%E5%86%B3%E7%AD%96%E6%A0%91/"/>
+    <id>http://example.com/2024/09/06/%E5%86%B3%E7%AD%96%E6%A0%91/</id>
+    <published>2024-09-06T01:34:09.000Z</published>
+    <updated>2024-09-06T01:38:00.859Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="决策树概述"><a class="markdownIt-Anchor" href="#决策树概述"></a> 决策树概述</h4><ol><li>决策树算法是一种基本的分类与回归方法，是最经常使用的数据挖掘算法之一，现在只讨论用于分类的决策树</li><li>决策树呈树形结构，依据特征对实例进行分类，可认为是<code>if-then</code>的集合</li><li>通常包括三个步骤：特征选择、决策树的生成、决策树的修剪</li></ol><p>经典游戏：“二十个问题”</p><h4 id="决策树定义"><a class="markdownIt-Anchor" href="#决策树定义"></a> 决策树定义</h4><ol><li>分类决策树模型是描述对实例进行分类的树形结构。决策树由点和有向边组成。结点有两种类型：内部结点 (internal node) 和叶结点 (leaf node) 。内部结点表示一个特征或属性 (features) ，叶结点表示一个类 (labels) 。</li><li>分类过程：从根节点开始，对实例的某一特征进行测试，根据测试结果，将实例分配到其子结点；这时，每一个子结点对应着该特征的一个取值。如此递归地对实例进行测试并分配，直到达到叶结点。最后将实例分配到叶结点的类中。</li></ol><h4 id="决策树原理"><a class="markdownIt-Anchor" href="#决策树原理"></a> 决策树原理</h4><h5 id="信息熵信息增益"><a class="markdownIt-Anchor" href="#信息熵信息增益"></a> 信息熵&amp;信息增益</h5><ol><li>熵（entropy）：熵指的是体系的混乱程度，在不同学科中也有引申出更为具体的定义，是各领域十分重要的参量</li><li>信息论中的熵（information theory）：是一种信息的度量方式，表示信息的混乱程度，也就是说信息越有序，信息熵越低。例如：火柴有序放在火柴盒里，熵值很低，相反，熵值很高。</li><li>信息增益（information gain）：在划分数据集前后信息发生的变化称为信息增益</li></ol><h5 id="工作原理"><a class="markdownIt-Anchor" href="#工作原理"></a> 工作原理</h5><p>构建一个决策树，可以用以下 createBranch() 方法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">createBranch</span>():<br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">此处运用了迭代的思想。 感兴趣可以搜索 迭代 recursion， 甚至是 dynamic programing。</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br>    检测数据集中的所有数据的分类标签是否相同:<br>        If so <span class="hljs-keyword">return</span> 类标签<br>        Else:<br>            寻找划分数据集的最好特征（划分之后信息熵最小，也就是信息增益最大的特征）<br>            划分数据集<br>            创建分支节点<br>                <span class="hljs-keyword">for</span> 每个划分的子集<br>                    调用函数 createBranch （创建分支的函数）并增加返回结果到分支节点中<br>            <span class="hljs-keyword">return</span> 分支节点<br></code></pre></td></tr></table></figure><h5 id="开发流程"><a class="markdownIt-Anchor" href="#开发流程"></a> 开发流程</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">收集数据: 可以使用任何方法。<br>准备数据: 树构造算法 (这里使用的是ID3算法，只适用于标称型数据，这就是为什么数值型数据必须离散化。 还有其他的树构造算法，比如CART)<br>分析数据: 可以使用任何方法，构造树完成之后，我们应该检查图形是否符合预期。<br>训练算法: 构造树的数据结构。<br>测试算法: 使用训练好的树计算错误率。<br>使用算法: 此步骤可以适用于任何监督学习任务，而使用决策树可以更好地理解数据的内在含义。<br></code></pre></td></tr></table></figure><h5 id="算法特点"><a class="markdownIt-Anchor" href="#算法特点"></a> 算法特点</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">优点: 计算复杂度不高，输出结果易于理解，数据有缺失也能跑，可以处理不相关特征。<br>缺点: 容易过拟合。<br>适用数据类型: 数值型和标称型。<br></code></pre></td></tr></table></figure><h4 id="参考链接"><a class="markdownIt-Anchor" href="#参考链接"></a> 参考链接</h4><p><a href="https://github.com/remnantsaint/ailearning/blob/master/docs/ml/3.md">https://github.com/remnantsaint/ailearning/blob/master/docs/ml/3.md</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;决策树概述&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#决策树概述&quot;&gt;&lt;/a&gt; 决策树概述&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;决策树算法是一种基本的分类与回归方法，是最经常使用的数据挖掘算法之一，现在只讨论用于分类的决策树&lt;/li&gt;
+&lt;li</summary>
+      
+    
+    
+    
+    <category term="人工智能" scheme="http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KNN近邻</title>
+    <link href="http://example.com/2024/09/06/KNN%E8%BF%91%E9%82%BB/"/>
+    <id>http://example.com/2024/09/06/KNN%E8%BF%91%E9%82%BB/</id>
+    <published>2024-09-06T01:33:39.000Z</published>
+    <updated>2024-09-06T01:42:01.652Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="knn算法原理"><a class="markdownIt-Anchor" href="#knn算法原理"></a> KNN算法原理</h4><ol><li>一句话总结：“近朱者赤近墨者黑”</li><li>KNN是一个简单的无显示学习过程，非泛化学习的监督学习模型。在分类和回归中均有应用。</li><li>先给出已知的数据集，计算未知数据与每个已知数据集的<code>距离</code>（欧氏距离），取前<code>K</code>个数据（K一般小于等于20）</li><li>在这K个数据中，多数属于某个类，就把该输入实例分为这个类</li></ol><h4 id="knn开发流程"><a class="markdownIt-Anchor" href="#knn开发流程"></a> KNN开发流程</h4><ol><li>收集数据：任何方法</li><li>准备数据：距离计算所需要的数值，最好是结构化的数据格式</li><li>分析数据：任何方法</li><li>训练算法：此步骤不适用于k-近邻算法（因为测试数据每一次都要与所有训练数据进行比较，所以这个过程是没必要的）</li><li>测试算法：计算错误率</li><li>使用算法：输入样本数据和结构化的输出结果，然后运行k-近邻算法判断输入数据分类属于哪个分类，最后计算出分类执行后续处理</li></ol><h4 id="knn算法特点"><a class="markdownIt-Anchor" href="#knn算法特点"></a> KNN算法特点</h4><ol><li>优点：精度高、对异常值不敏感、无数据输入假定</li><li>缺点：计算复杂度高、空间复杂度高</li><li>适用数据范围：数值型和标称型</li></ol><h4 id="knn三要素"><a class="markdownIt-Anchor" href="#knn三要素"></a> KNN三要素</h4><ol><li>K的取值<br />  K取值过小：近似误差小，估计误差大，容易过拟合，预测出错<br />  K取值过大：近似误差大，估计误差小，模型变简单，预测容易错误</li><li>距离度量<br />  距离度量通常是欧氏距离，也可以是曼哈顿距离或者Minkowski距离，也可以是地理空间中的一些距离公式。</li><li>分类决策：<br />  分类决策在分类问题中通常为少数服从多数，选取票数最多的标签，在回归问题中通常为K个最邻点的标签的平均值</li></ol><h4 id="knn算法伪代码"><a class="markdownIt-Anchor" href="#knn算法伪代码"></a> KNN算法伪代码：</h4><p>对于每一个在数据集中的数据点:<br />  计算目标的数据点（需要分类的数据点）与该数据点的距离<br />  将距离排序: 从小到大<br />  选取前K个最短距离<br />  选取这K个中最多的分类类别<br />  返回该类别来作为目标数据点的预测值</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">classify0</span>(<span class="hljs-params">inX, dataSet, labels, k</span>):<br>    dataSetSize = dataSet.shape[<span class="hljs-number">0</span>]<br>    <span class="hljs-comment">#距离度量 度量公式为欧氏距离</span><br>    diffMat = tile(inX, (dataSetSize,<span class="hljs-number">1</span>)) – dataSet<br>    sqDiffMat = diffMat**<span class="hljs-number">2</span><br>    sqDistances = sqDiffMat.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>)<br>    distances = sqDistances**<span class="hljs-number">0.5</span><br>    <br>    <span class="hljs-comment">#将距离排序: 从小到大</span><br>    sortedDistIndicies = distances.argsort()<br>    <span class="hljs-comment">#选取前K个最短距离， 选取这K个中最多的分类类别</span><br>    classCount=&#123;&#125;<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k): <br>        voteIlabel = labels[sortedDistIndicies[i]]<br>        classCount[voteIlabel] = classCount.get(voteIlabel,<span class="hljs-number">0</span>) + <span class="hljs-number">1</span> <br>    sortedClassCount = <span class="hljs-built_in">sorted</span>(classCount.iteritems(), key=operator.itemgetter(<span class="hljs-number">1</span>), reverse=<span class="hljs-literal">True</span>)<br>    <span class="hljs-keyword">return</span> sortedClassCount[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]<br></code></pre></td></tr></table></figure><h4 id="参考链接httpsgithubcomremnantsaintailearningblobmasterdocsml2md"><a class="markdownIt-Anchor" href="#参考链接httpsgithubcomremnantsaintailearningblobmasterdocsml2md"></a> 参考链接：<a href="https://github.com/remnantsaint/ailearning/blob/master/docs/ml/2.md">https://github.com/remnantsaint/ailearning/blob/master/docs/ml/2.md</a></h4>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;knn算法原理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#knn算法原理&quot;&gt;&lt;/a&gt; KNN算法原理&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;一句话总结：“近朱者赤近墨者黑”&lt;/li&gt;
+&lt;li&gt;KNN是一个简单的无显示学习过程，非泛化学习的监督</summary>
+      
+    
+    
+    
+    <category term="人工智能" scheme="http://example.com/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>python打包</title>
@@ -428,80 +504,6 @@
     
     
     <category term="数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>反转部分链表</title>
-    <link href="http://example.com/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%83%A8%E5%88%86%E9%93%BE%E8%A1%A8/"/>
-    <id>http://example.com/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%83%A8%E5%88%86%E9%93%BE%E8%A1%A8/</id>
-    <published>2023-04-02T14:35:50.000Z</published>
-    <updated>2023-04-03T10:17:07.107Z</updated>
-    
-    <content type="html"><![CDATA[<p>难度：中等<br />题目链接：<a href="https://leetcode.cn/problems/reverse-linked-list-ii/description/">https://leetcode.cn/problems/reverse-linked-list-ii/description/</a><br />题意：反转链表的一部分，从left到right，例如[1,2,3,4,5]，left=2，right=4时，解为[1,4,3,2,5]</p><p>题解：反转部分链表可实现，但是反转后如何连接起来需要考虑，即将left-1与right、left与right+1连接起来，需要记录这些结点</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * struct ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode *next;</span><br><span class="hljs-comment"> * &#125;;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">private</span>:<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">reverseLinklist</span><span class="hljs-params">(ListNode *head)</span></span>&#123;<br>ListNode *pre,*p;<br>        pre=<span class="hljs-literal">NULL</span>;<span class="hljs-comment">//pre一开始在头结点</span><br>        p=head;<span class="hljs-comment">//p一开始在首元结点</span><br>        <span class="hljs-keyword">while</span>(p!=<span class="hljs-literal">NULL</span>)&#123;<br>            ListNode *q=p-&gt;next;<br>            p-&gt;next=pre;<span class="hljs-comment">//改变p点的指针指向</span><br>            pre=p;<span class="hljs-comment">//将pre移向下一个结点</span><br>            p=q;<span class="hljs-comment">//将p移向下一个结点</span><br>        &#125;<br>        <span class="hljs-comment">//不需要返回，因为结点名称不变</span><br>&#125;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">reverseBetween</span><span class="hljs-params">(ListNode* head, <span class="hljs-type">int</span> left, <span class="hljs-type">int</span> right)</span> </span>&#123;<br>ListNode *dummyhead = <span class="hljs-keyword">new</span> <span class="hljs-built_in">ListNode</span>();<br>dummyhead-&gt;next=head;<span class="hljs-comment">//定义虚拟头结点，因为首元结点可能变化</span><br><br>ListNode *pre = dummyhead;<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;left<span class="hljs-number">-1</span>;i++)&#123;<br>pre=pre-&gt;next;<span class="hljs-comment">//从头结点走left-1步，定格在left-1结点处</span><br>&#125;<br><br>ListNode *rightNode = pre;<span class="hljs-comment">//接力pre结点，继续往下循环</span><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; right - left + <span class="hljs-number">1</span> ; i++)&#123;<br>rightNode = rightNode-&gt;next;<span class="hljs-comment">//rightNode循环到right结点</span><br>&#125;<br><br>ListNode *leftNode = pre-&gt;next;<span class="hljs-comment">//指向left</span><br>ListNode *curr = rightNode-&gt;next;<span class="hljs-comment">//指向right+1</span><br><br>pre-&gt;next = <span class="hljs-literal">NULL</span>;<br>rightNode-&gt;next=<span class="hljs-literal">NULL</span>;<span class="hljs-comment">//切断链接，截取链表</span><br><br><span class="hljs-built_in">reverseLinklist</span>(leftNode);<span class="hljs-comment">//反转部分链表，各结点位置不变</span><br><br>pre-&gt;next=rightNode;<span class="hljs-comment">//连接前部分</span><br>leftNode-&gt;next=curr;<span class="hljs-comment">//连接后部分</span><br><span class="hljs-keyword">return</span> dummyhead-&gt;next;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;难度：中等&lt;br /&gt;
-题目链接：&lt;a href=&quot;https://leetcode.cn/problems/reverse-linked-list-ii/description/&quot;&gt;https://leetcode.cn/problems/reverse-linked-l</summary>
-      
-    
-    
-    
-    <category term="题解" scheme="http://example.com/categories/%E9%A2%98%E8%A7%A3/"/>
-    
-    
-    <category term="链表" scheme="http://example.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>反转链表</title>
-    <link href="http://example.com/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
-    <id>http://example.com/2023/04/02/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</id>
-    <published>2023-04-02T12:47:07.000Z</published>
-    <updated>2023-04-03T13:20:57.862Z</updated>
-    
-    <content type="html"><![CDATA[<p>难度：简单<br />题目链接：<a href="https://leetcode.cn/problems/reverse-linked-list/description/">https://leetcode.cn/problems/reverse-linked-list/description/</a><br />题意：给出一个链表的头结点（首元结点），将该链表反转后，返回反转后的链表<br />题解：</p><h5 id="方法一迭代"><a class="markdownIt-Anchor" href="#方法一迭代"></a> 方法一：迭代</h5><p>直接在遍历链表的过程中原地修改，将当前结点的next指针改为指向前一个节点，然后将p和pre结点都后移，需要借助p的后面结点，所以循环的开始先定义一个q=p-&gt;next;</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * struct ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode *next;</span><br><span class="hljs-comment"> *     ListNode() : val(0), next(nullptr) &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int x) : val(x), next(nullptr) &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int x, ListNode *next) : val(x), next(next) &#123;&#125;</span><br><span class="hljs-comment"> * &#125;;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode* head)</span> </span>&#123;<br>        ListNode *pre,*p;<br>        pre=<span class="hljs-literal">NULL</span>;<span class="hljs-comment">//pre一开始在头结点</span><br>        p=head;<span class="hljs-comment">//p一开始在首元结点</span><br>        <span class="hljs-keyword">while</span>(p!=<span class="hljs-literal">NULL</span>)&#123;<br>            ListNode *q=p-&gt;next;<br>            p-&gt;next=pre;<span class="hljs-comment">//改变p点的指针指向</span><br>            pre=p;<span class="hljs-comment">//将pre移向下一个结点</span><br>            p=q;<span class="hljs-comment">//将p移向下一个结点</span><br>        &#125;<br>        <span class="hljs-keyword">return</span> pre;<span class="hljs-comment">//遍历到结尾时，pre在最后一个结点</span><br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure><h5 id="方法二递归"><a class="markdownIt-Anchor" href="#方法二递归"></a> 方法二：递归</h5><p>一直递归到倒数第二个结点，找到结果头结点newhead，然后执行head-&gt;next-&gt;next=null反转最后一个结点和倒数第二个结点的指针，改变head-&gt;next=NULL，然后回退挨个反转。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">ListNode* <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode* head)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(head==<span class="hljs-literal">NULL</span>||head-&gt;next==<span class="hljs-literal">NULL</span>)&#123;<span class="hljs-comment">//为什么head==NULL?  测试用例有空链表</span><br>            <span class="hljs-keyword">return</span> head;<span class="hljs-comment">//最后返回的是最后一个结点，让newhead等于最后一个结点</span><br>        &#125;<br>        ListNode *newhead = <span class="hljs-built_in">reverseList</span>(head-&gt;next);<span class="hljs-comment">//注意，只会执行一次</span><br>        head-&gt;next-&gt;next=head;<span class="hljs-comment">//该行代码第一次执行时是倒数第二个结点，反转指针</span><br>        head-&gt;next=<span class="hljs-literal">NULL</span>;<span class="hljs-comment">//提前定义空指针</span><br>        <span class="hljs-keyword">return</span> newhead;<span class="hljs-comment">//一直返回最后的头结点</span><br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;难度：简单&lt;br /&gt;
-题目链接：&lt;a href=&quot;https://leetcode.cn/problems/reverse-linked-list/description/&quot;&gt;https://leetcode.cn/problems/reverse-linked-list</summary>
-      
-    
-    
-    
-    <category term="题解" scheme="http://example.com/categories/%E9%A2%98%E8%A7%A3/"/>
-    
-    
-    <category term="链表" scheme="http://example.com/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>迭代&amp;递归&amp;分治</title>
-    <link href="http://example.com/2023/04/02/%E8%BF%AD%E4%BB%A3-%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB/"/>
-    <id>http://example.com/2023/04/02/%E8%BF%AD%E4%BB%A3-%E9%80%92%E5%BD%92-%E5%88%86%E6%B2%BB/</id>
-    <published>2023-04-02T12:02:43.000Z</published>
-    <updated>2023-04-09T15:17:41.514Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="迭代"><a class="markdownIt-Anchor" href="#迭代"></a> 迭代</h4><p>1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。<br />2.在代码中表现为在一个循环内，不断循环最终得到结果。</p><h4 id="递归"><a class="markdownIt-Anchor" href="#递归"></a> 递归</h4><p>1.定义：递归在数学和计算机科学中指在函数的定义中使用函数自身的方法，还额外指一种通过重复将问题分解为同类子问题而解决问题的方法。基本思想是某个函数直接或间接地调用自身，在求解过程中只需关注如何把原问题划分成符合条件的子问题，不需要过分关注子问题如何解决。<br />2.特征：<strong>结束条件</strong>和<strong>自我调用</strong>，示例概括代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">func</span><span class="hljs-params">(传入数值)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span> (终止条件)<br>        <span class="hljs-keyword">return</span> 最小子问题解;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">func</span>(缩小规模);<br>&#125;<br></code></pre></td></tr></table></figure><p>3.缺点：在程序执行中，递归是利用堆栈实现的，每当进入一个函数调用，栈就会增加一层栈帧，每次函数返回，栈就会减少一层栈帧，递归层数过多会栈溢出。简单的递归不会消耗空间，比如给出链表头，计算长度的递归代码：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">size_recursion</span><span class="hljs-params">(Node *head)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">nullptr</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">size_recursion</span>(head-&gt;next) + <span class="hljs-number">1</span>;<span class="hljs-comment">//有一个结点加一次1</span><br>&#125;<br></code></pre></td></tr></table></figure><h4 id="分治"><a class="markdownIt-Anchor" href="#分治"></a> 分治</h4><p>1.定义：把一个复杂问题分成多个相同或相似的子问题，直到最后子问题都可以直接求解，原问题即子问题的解的合并。分治问题能通过递归算法解决，也能通过非递归算法解决，通常用递归算法<br />2.过程：</p><ul><li>分解原问题为结构相同的子问题</li><li>分解到某个容易求解的边界之后，进行递归求解</li><li>将子问题的解合并成原问题的解<br />3.能解决的问题特征：</li><li>该问题的规模缩小到一定程度就可以容易地解决</li><li>该问题可以分解为若干个规模较小的相同问题，即该问题具有最优子结构性质，利用该问题分解出的子问题的解可以合并成该问题的解</li><li>该问题所分解出的各个子问题是<strong>相互独立</strong>的，即子问题之间不包含公共的子问题。(若子问题不相互独立，一般用动态规划)<br />4.分治与递归的区别：递归是一种变成技巧，一种解决问题的思维方式；分治算法很大程度上是基于递归的，解决更具体的算法思想。</li></ul><p>参考：<br />  <a href="https://oi.wiki">https://oi.wiki</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;迭代&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#迭代&quot;&gt;&lt;/a&gt; 迭代&lt;/h4&gt;
-&lt;p&gt;1.迭代法称为辗转法，不断的用变量旧值求出新值，即对一组指令循环执行，最终得到新值作为结果。&lt;br /&gt;
-2.在代码中表现为在一个循环内，不断循</summary>
-      
-    
-    
-    
-    <category term="算法基础" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
