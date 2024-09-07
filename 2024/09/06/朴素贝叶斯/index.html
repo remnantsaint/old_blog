@@ -18,15 +18,21 @@
   
   
   <title>朴素贝叶斯 | Remsait</title>
-  <meta property="og:type" content="article">
+  <meta name="description" content="朴素贝叶斯概述   贝叶斯分类是一类分类算法的总称，这类算法均以贝叶斯定理为基础，故统称为贝叶斯分类。首先需要介绍贝叶斯分类算法的基础——贝叶斯定理。最后，通过实例来讨论贝叶斯分类中最简单的一种：朴素贝叶斯分类。  贝叶斯理论 &amp; 条件概率  贝叶斯理论   数据集由两类数据组成，数据分布如下所示    我们用p1(x,y)来表示数据点(x,y)位于类别1（图中圆点）的概率   用p2(">
+<meta property="og:type" content="article">
 <meta property="og:title" content="朴素贝叶斯">
 <meta property="og:url" content="http://example.com/2024/09/06/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="朴素贝叶斯概述   贝叶斯分类是一类分类算法的总称，这类算法均以贝叶斯定理为基础，故统称为贝叶斯分类。首先需要介绍贝叶斯分类算法的基础——贝叶斯定理。最后，通过实例来讨论贝叶斯分类中最简单的一种：朴素贝叶斯分类。  贝叶斯理论 &amp; 条件概率  贝叶斯理论   数据集由两类数据组成，数据分布如下所示    我们用p1(x,y)来表示数据点(x,y)位于类别1（图中圆点）的概率   用p2(">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/remnantsaint/hexoImage@main/20240906113001.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/remnantsaint/hexoImage@main/20240906163600.png">
 <meta property="article:published_time" content="2024-09-06T02:50:55.000Z">
-<meta property="article:modified_time" content="2024-09-06T02:50:55.932Z">
+<meta property="article:modified_time" content="2024-09-07T10:51:29.431Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/remnantsaint/hexoImage@main/20240906113001.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://example.com/2024/09/06/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/index.html">
   
@@ -198,7 +204,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%90%9C%E7%B4%A2/">搜索</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">算法基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a><span class="category-list-count">10</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9B%BE%E8%AE%BA/">图论</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%90%9C%E7%B4%A2/">搜索</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/">算法基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a><span class="category-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -208,7 +214,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%88%E5%B8%8C/" rel="tag">哈希</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/" rel="tag">高精度</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%88%E5%B8%8C/" rel="tag">哈希</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E7%B2%BE%E5%BA%A6/" rel="tag">高精度</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -273,7 +279,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a>
               </p>
               <p class="item-title">
                 <a href="/2024/09/06/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/" class="title">朴素贝叶斯</a>
@@ -325,6 +331,18 @@
 
   
   
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope
+    itemtype="http://schema.org/WPSideBar">
+    <div class="slimContent">
+      <nav id="toc" class="article-toc">
+        <h3 class="toc-title">
+          文章目录
+        </h3>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%A6%82%E8%BF%B0"><span class="toc-text"> 朴素贝叶斯概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%90%86%E8%AE%BA-%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87"><span class="toc-text"> 贝叶斯理论 &amp; 条件概率</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%90%86%E8%AE%BA"><span class="toc-text"> 贝叶斯理论</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87"><span class="toc-text"> 条件概率</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E6%9D%A5%E5%88%86%E7%B1%BB"><span class="toc-text"> 使用条件概率来分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text"> 使用场景</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%8E%9F%E7%90%86"><span class="toc-text"> 朴素贝叶斯原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text"> 工作原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-text"> 开发流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%89%B9%E7%82%B9"><span class="toc-text"> 算法特点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-text"> 参考链接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#httpsgithubcomremnantsaintailearningblobmasterdocsml4md"><span class="toc-text">   https:&#x2F;&#x2F;github.com&#x2F;remnantsaint&#x2F;ailearning&#x2F;blob&#x2F;master&#x2F;docs&#x2F;ml&#x2F;4.md</span></a>
+      </nav>
+    </div>
+  </aside>
+  
 <main class="main" role="main">
   <div class="content">
   <article id="post-朴素贝叶斯" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -347,7 +365,17 @@
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a>
+  </span>
+
         
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a>
+  </span>
+
 
         
 	<span class="article-read hidden-xs">
@@ -361,17 +389,60 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/09/06/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <h4 id="朴素贝叶斯概述"><a class="markdownIt-Anchor" href="#朴素贝叶斯概述"></a> 朴素贝叶斯概述</h4>
+<p>  贝叶斯分类是一类分类算法的总称，这类算法均以贝叶斯定理为基础，故统称为贝叶斯分类。首先需要介绍贝叶斯分类算法的基础——贝叶斯定理。最后，通过实例来讨论贝叶斯分类中最简单的一种：朴素贝叶斯分类。</p>
+<h4 id="贝叶斯理论-条件概率"><a class="markdownIt-Anchor" href="#贝叶斯理论-条件概率"></a> 贝叶斯理论 &amp; 条件概率</h4>
+<h5 id="贝叶斯理论"><a class="markdownIt-Anchor" href="#贝叶斯理论"></a> 贝叶斯理论</h5>
+<p>  数据集由两类数据组成，数据分布如下所示<br />
+<img src="https://cdn.jsdelivr.net/gh/remnantsaint/hexoImage@main/20240906113001.png" alt="" /><br />
+  我们用p1(x,y)来表示数据点(x,y)位于类别1（图中圆点）的概率<br />
+  用p2(x,y)来表示数据点(x,y)属于类别2（图中三角）的概率<br />
+  可以用下面的规则来判断他的类别</p>
+<ul>
+<li>如果p1(x,y) &gt; p2(x,y)，那么类别为1</li>
+<li>如果p1(x,y) &lt; p2(x,y)，那么类别为2<br />
+  也就是说，我们会选择高概率对应的类别，这就是贝叶斯决策理论的核心思想，即选择具有最高概率的决策</li>
+</ul>
+<h5 id="条件概率"><a class="markdownIt-Anchor" href="#条件概率"></a> 条件概率</h5>
+<p>  要了解贝叶斯公式：<br />
+<img src="https://cdn.jsdelivr.net/gh/remnantsaint/hexoImage@main/20240906163600.png" alt="" /><br />
+即要求p(c|x)，可以用p(x|c)和p(x)与p©来计算。<br />
+其中p(x|c)=p(xc)/p(x)</p>
+<h5 id="使用条件概率来分类"><a class="markdownIt-Anchor" href="#使用条件概率来分类"></a> 使用条件概率来分类</h5>
+<ol>
+<li>实际上，贝叶斯决策理论真正需要计算和比较的是p(c1|x,y)和p(c2|x,y)</li>
+<li>这些符号的具体意义：给定某个由x,y表示的数据点，那么该数据点来自类别c1的概率是多少？数据点来自类别c2的概率又是多少？注意这些概率与概率p(x,y|c1)不一样，不过可以使用贝叶斯准则来交换概率中条件与结果，也就是以下公式<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;_&#039; at position 30: …c{\text{p(x,y|c_̲i)p(c_j)}}{\tex…'>p(c_i|x,y)=frac{\text{p(x,y|c_i)p(c_j)}}{\text{p(x,y)}}</span></li>
+<li>使用上面这些定义，可以定义贝叶斯分类准则为：<br />
+  * 如果 P(c1|x, y) &gt; P(c2|x, y), 那么属于类别 c1;<br />
+  * 如果 P(c2|x, y) &gt; P(c1|x, y), 那么属于类别 c2.</li>
+</ol>
+<h5 id="使用场景"><a class="markdownIt-Anchor" href="#使用场景"></a> 使用场景</h5>
+<p>  机器学习的一个重要应用就是文档的自动分类，在文档分类中，整个文档是实例，文档中的某些元素构成特征，把每个词作为一个特征，而每个词的出现或不出现作为该特征的值，这样得到的特征数目就会跟词汇表中的词的数目一样多<br />
+  朴素贝叶斯是上述贝叶斯分类器的一个扩展，是用于文档分类的常用算法。</p>
+<h4 id="朴素贝叶斯原理"><a class="markdownIt-Anchor" href="#朴素贝叶斯原理"></a> 朴素贝叶斯原理</h4>
+<h5 id="工作原理"><a class="markdownIt-Anchor" href="#工作原理"></a> 工作原理</h5>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">提取所有文档中的词条并进行去重<br>获取文档的所有类别<br>计算每个类别中的文档数目<br>对每篇训练文档: <br>    对每个类别: <br>        如果词条出现在文档中--&gt;增加该词条的计数值（for循环或者矩阵相加）<br>        增加所有词条的计数值（此类别下词条总数）<br>对每个类别: <br>    对每个词条: <br>        将该词条的数目除以总词条数目得到的条件概率（P(词条|类别)）<br>返回该文档属于每个类别的条件概率（P(类别|文档的所有词条)）<br></code></pre></td></tr></table></figure>
+<h5 id="开发流程"><a class="markdownIt-Anchor" href="#开发流程"></a> 开发流程</h5>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">收集数据: 可以使用任何方法。<br>准备数据: 需要数值型或者布尔型数据。<br>分析数据: 有大量特征时，绘制特征作用不大，此时使用直方图效果更好。<br>训练算法: 计算不同的独立特征的条件概率。<br>测试算法: 计算错误率。<br>使用算法: 一个常见的朴素贝叶斯应用是文档分类。可以在任意的分类场景中使用朴素贝叶斯分类器，不一定非要是文本。<br></code></pre></td></tr></table></figure>
+<h5 id="算法特点"><a class="markdownIt-Anchor" href="#算法特点"></a> 算法特点</h5>
+<ul>
+<li>优点：在数据较少的情况下仍然有效，可以处理多类别问题</li>
+<li>缺点：对于输入数据的准备方式较为敏感</li>
+<li>适用数据类型：标称型数据</li>
+</ul>
+<h4 id="参考链接"><a class="markdownIt-Anchor" href="#参考链接"></a> 参考链接</h4>
+<h2 id="httpsgithubcomremnantsaintailearningblobmasterdocsml4md"><a class="markdownIt-Anchor" href="#httpsgithubcomremnantsaintailearningblobmasterdocsml4md"></a>   <a target="_blank" rel="noopener" href="https://github.com/remnantsaint/ailearning/blob/master/docs/ml/4.md">https://github.com/remnantsaint/ailearning/blob/master/docs/ml/4.md</a></h2>
+
       
     </div>
     <div class="article-footer">
@@ -433,6 +504,14 @@
       <a href="/2024/09/06/%E7%94%9F%E4%BF%A1linux/" title="生信linux"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">    <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
   </ul>
   
