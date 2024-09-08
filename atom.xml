@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-09-07T13:51:40.670Z</updated>
+  <updated>2024-09-08T03:07:33.808Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2024/09/07/valaxy%E5%BB%BA%E7%AB%99/"/>
     <id>http://example.com/2024/09/07/valaxy%E5%BB%BA%E7%AB%99/</id>
     <published>2024-09-07T13:50:59.000Z</published>
-    <updated>2024-09-07T13:51:40.670Z</updated>
+    <updated>2024-09-08T03:07:33.808Z</updated>
     
-    <content type="html"><![CDATA[<p>以下纪录我开始用Valaxy框架，yun主题重新建站的过程<br />valaxy官方文档：<a href="https://valaxy.site/guide/getting-started">https://valaxy.site/guide/getting-started</a><br />首先下载nvm，然后用nvm下载18版本的node.js，再下载pnpm，其中得把node.js加入环境变量<br /><code>pnpm run dev</code>为开启本地开发环境<br /><code>pnpm new post-title</code>为新建文章<br /><code>pnpm run build</code>为构建静态文件</p><p>配置一下pnpm环境变量：<code>pnpm setup</code><br />然后下载valaxy命令行：<code>pnpm add -g valaxy</code>  全局安装</p>]]></content>
+    <content type="html"><![CDATA[<p>以下纪录我开始用Valaxy框架，yun主题重新建站的过程<br />valaxy官方文档：<a href="https://valaxy.site/guide/getting-started">https://valaxy.site/guide/getting-started</a><br />首先下载nvm，然后用nvm下载18版本的node.js，再下载pnpm，其中得把node.js加入环境变量<br /><code>pnpm run dev</code>为开启本地开发环境<br /><code>pnpm new post-title</code>为新建文章<br /><code>pnpm run build</code>为构建静态文件  也可以<code>valaxy build --ssg</code></p><p>配置一下pnpm环境变量：<code>pnpm setup</code><br />然后下载valaxy命令行：<code>pnpm add -g valaxy</code>  全局安装</p><p>自定义域名失效问题：在public文件夹创建<code>CNAME</code>文件，里面有不带https和www的域名</p><p><code>valaxy</code> 预览界面<br /><code>valaxy new name</code>创建新文章</p><p>在主题配置文件中，背景图片可以用<code>/bgimage/x.jpg</code>来设置，其中<code>bgimage</code>是<code>public</code>下的一个文件夹</p><p>好难啊，暂时不想改主题了，以后有时间系统学习一下vue相关的再改吧。没有前端基础，自己创个新界面都费劲。<br />慢慢在本地修改界面，最后再设置成用域名访问吧，反正hexo部署在xxx.github.io上，valaxy可以随便建库，用域名访问。</p>]]></content>
     
     
       
